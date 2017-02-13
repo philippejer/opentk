@@ -26,7 +26,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Xml.Serialization;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     /// <summary>Represents a 2D vector using two single-precision floating-point numbers.</summary>
     /// <remarks>
@@ -989,7 +989,7 @@ namespace OpenTK
         #region Swizzle
 
         /// <summary>
-        /// Gets or sets an OpenTK.Vector2 with the Y and X components of this instance.
+        /// Gets or sets an CustomOpenTK.Vector2 with the Y and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2 Yx { get { return new Vector2(Y, X); } set { Y = value.X; X = value.Y; } }

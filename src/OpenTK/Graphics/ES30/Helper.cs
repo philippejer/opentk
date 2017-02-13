@@ -33,7 +33,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace OpenTK.Graphics.ES30
+namespace CustomOpenTK.Graphics.ES30
 {
     /// <summary>
     /// Provides access to OpenGL ES 3.0 methods.
@@ -433,12 +433,12 @@ namespace OpenTK.Graphics.ES30
             GL.Viewport(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
         }
 #if MINIMAL
-        public static void Viewport(OpenTK.Point location, OpenTK.Size size)
+        public static void Viewport(CustomOpenTK.Point location, CustomOpenTK.Size size)
         {
             GL.Viewport(location.X, location.Y, size.Width, size.Height);
         }
 
-        public static void Viewport(OpenTK.Rectangle rectangle)
+        public static void Viewport(CustomOpenTK.Rectangle rectangle)
         {
             GL.Viewport(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
         }

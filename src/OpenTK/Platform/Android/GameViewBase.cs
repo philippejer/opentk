@@ -12,10 +12,10 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Timers;
 
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Platform;
-using OpenTK.Platform.Android;
+using CustomOpenTK;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Platform;
+using CustomOpenTK.Platform.Android;
 
 using Android.Content;
 using Android.Util;
@@ -23,9 +23,9 @@ using Android.Views;
 using Android.Runtime;
 
 using Java.Util;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     [Register ("opentk_1_1/GameViewBase")]
     public abstract class GameViewBase : SurfaceView, IGameWindow
@@ -48,13 +48,13 @@ namespace OpenTK
         }
 
         /// <summary>
-        ///   Gets the <see cref="T:OpenTK.Graphics.IGraphicsContext" /> instance
+        ///   Gets the <see cref="T:CustomOpenTK.Graphics.IGraphicsContext" /> instance
         ///   bound to this
-        ///   <see cref="T:OpenTK.Platform.Android.AndroidGameView" /> instance.
+        ///   <see cref="T:CustomOpenTK.Platform.Android.AndroidGameView" /> instance.
         /// </summary>
         /// <value>
-        ///   A <see cref="T:OpenTK.Graphics.IGraphicsContext" /> instance bound
-        ///   to this <see cref="T:OpenTK.Platform.Android.AndroidGameView" />
+        ///   A <see cref="T:CustomOpenTK.Graphics.IGraphicsContext" /> instance bound
+        ///   to this <see cref="T:CustomOpenTK.Platform.Android.AndroidGameView" />
         ///   instance.
         /// </value>
         public IGraphicsContext GraphicsContext {
@@ -107,35 +107,35 @@ namespace OpenTK
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
         ///       </term>
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///       </term>
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///       </term>
         ///     </item>
         ///   </list>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run" /> and
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run" /> and
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
         ///     invoke
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///     before starting the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop which is invoked for every rendered frame.
         ///   </para>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Stop" />
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Stop" />
         ///     ends the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop processing, then invokes the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///     event.
         ///   </para>
         /// </remarks>
@@ -146,7 +146,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///   event.
         /// </summary>
         protected virtual void OnLoad (EventArgs e)
@@ -166,17 +166,17 @@ namespace OpenTK
         ///   <list type="number">
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///       </term>
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
         ///       </term>
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///       </term>
         ///     </item>
         ///     <item>
@@ -186,20 +186,20 @@ namespace OpenTK
         ///     </item>
         ///   </list>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run" /> and
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run" /> and
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
         ///     invoke
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///     before starting the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop which is invoked for every rendered frame.
         ///   </para>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Stop" />
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Stop" />
         ///     ends the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop processing, then invokes the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///     event.
         ///   </para>
         /// </remarks>
@@ -210,7 +210,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -242,7 +242,7 @@ namespace OpenTK
         ///   <list type="number">
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///       </term>
         ///     </item>
         ///     <item>
@@ -252,41 +252,41 @@ namespace OpenTK
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///       </term>
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///       </term>
         ///     </item>
         ///   </list>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run" /> and
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run" /> and
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
         ///     invoke
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///     before starting the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop which is invoked for every rendered frame.
         ///   </para>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Stop" />
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Stop" />
         ///     ends the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop processing, then invokes the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///     event.
         ///   </para>
         /// </remarks>
         public event EventHandler<FrameEventArgs> UpdateFrame;
 
         /// <param name="e">
-        ///   An <see cref="T:OpenTK.FrameEventArgs" /> that contains the event data.
+        ///   An <see cref="T:CustomOpenTK.FrameEventArgs" /> that contains the event data.
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -318,12 +318,12 @@ namespace OpenTK
         ///   <list type="number">
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///       </term>
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
         ///       </term>
         ///     </item>
         ///     <item>
@@ -333,36 +333,36 @@ namespace OpenTK
         ///     </item>
         ///     <item>
         ///       <term>
-        ///         <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///         <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///       </term>
         ///     </item>
         ///   </list>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run" /> and
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run" /> and
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Run(System.Double)" />,
         ///     invoke
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Load" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Load" />
         ///     before starting the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop which is invoked for every rendered frame.
         ///   </para>
         ///   <para>
-        ///     <see cref="M:OpenTK.Platform.Android.AndroidGameView.Stop" />
+        ///     <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Stop" />
         ///     ends the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />/<see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     loop processing, then invokes the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.Unload" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Unload" />
         ///     event.
         ///   </para>
         /// </remarks>
         public event EventHandler<FrameEventArgs> RenderFrame;
 
         /// <param name="e">
-        ///   An <see cref="T:OpenTK.FrameEventArgs" /> that contains the event data.
+        ///   An <see cref="T:CustomOpenTK.FrameEventArgs" /> that contains the event data.
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -389,16 +389,16 @@ namespace OpenTK
         /// <remarks>
         ///   <para>
         ///     In this <c>Run</c> overload, there is no delay between raising of the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderFrame" />
         ///     event and the
-        ///     <see cref="E:OpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
+        ///     <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.UpdateFrame" />
         ///     of the following frame; everything is executed as quickly as
         ///     possible.  This may not be desirable.
         ///   </para>
         /// </remarks>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public abstract void Run ();
@@ -413,14 +413,14 @@ namespace OpenTK
         /// </summary>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public abstract void Run (double updateRate);
 
         /// <summary>
         ///   Makes the
-        ///   <see cref="P:OpenTK.Platform.Android.AndroidGameView.GraphicsContext" />
+        ///   <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.GraphicsContext" />
         ///   current on the calling thread.
         /// </summary>
         /// <remarks>
@@ -431,7 +431,7 @@ namespace OpenTK
         /// </remarks>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public abstract void MakeCurrent ();
@@ -443,14 +443,14 @@ namespace OpenTK
         /// <remarks>
         ///   <para>
         ///     This method rebinds
-        ///     <see cref="P:OpenTK.Platform.Android.AndroidGameView.Renderbuffer" />
+        ///     <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.Renderbuffer" />
         ///     to the OpenGL context's <c>RenderbufferOes</c> property, then
-        ///     invokes <see cref="M:OpenTK.Graphics.IGraphicsContext.SwapBuffers" />.
+        ///     invokes <see cref="M:CustomOpenTK.Graphics.IGraphicsContext.SwapBuffers" />.
         ///   </para>
         /// </remarks>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public abstract void SwapBuffers ();
@@ -469,7 +469,7 @@ namespace OpenTK
 
         /// <summary>
         ///   Occurs when the view's
-        ///   <see cref="P:OpenTK.Platform.Android.AndroidGameView.Size" />
+        ///   <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.Size" />
         ///   changes.
         /// </summary>
         /// <remarks>
@@ -481,7 +481,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.Resize" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Resize" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -523,7 +523,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.Closed" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Closed" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -553,7 +553,7 @@ namespace OpenTK
 
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.Disposed" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.Disposed" />
         ///   event.
         /// </summary>
         /// <param name="e">
@@ -579,8 +579,8 @@ namespace OpenTK
 
         /// <summary>
         ///   Occurs when the
-        ///   <see cref="T:OpenTK.Platform.Android.AndroidGameView" />
-        ///   detects that the <see cref="P:OpenTK.Platform.Android.AndroidGameView.GraphicsContext"> was lost.
+        ///   <see cref="T:CustomOpenTK.Platform.Android.AndroidGameView" />
+        ///   detects that the <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.GraphicsContext"> was lost.
         /// </summary>
         /// <remarks>
         /// </remarks>
@@ -591,7 +591,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.ContextLost" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.ContextLost" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -614,7 +614,7 @@ namespace OpenTK
 
         /// <summary>
         ///   Occurs when the
-        ///   <see cref="P:OpenTK.Platform.Android.AndroidGameView.GraphicsContext" />
+        ///   <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.GraphicsContext" />
         ///   is created.
         /// </summary>
         /// <remarks>
@@ -626,7 +626,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.ContextSet" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.ContextSet" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -662,7 +662,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.RenderThreadExited" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.RenderThreadExited" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -688,7 +688,7 @@ namespace OpenTK
 
         /// <summary>
         ///   Occurs when the value of
-        ///   <see cref="P:OpenTK.Platform.Android.AndroidGameView.Title" />
+        ///   <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.Title" />
         ///   changes.
         /// </summary>
         /// <remarks>
@@ -700,7 +700,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.TitleChanged" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.TitleChanged" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -723,7 +723,7 @@ namespace OpenTK
 
         /// <summary>
         ///   Occurs when the value of
-        ///   <see cref="P:OpenTK.Platform.Android.AndroidGameView.Visible" />
+        ///   <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.Visible" />
         ///   changes.
         /// </summary>
         /// <remarks>
@@ -735,7 +735,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.VisibleChanged" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.VisibleChanged" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -776,7 +776,7 @@ namespace OpenTK
 
         /// <summary>
         ///   Occurs when the value of
-        ///   <see cref="P:OpenTK.Platform.Android.AndroidGameView.WindowState" />
+        ///   <see cref="P:CustomOpenTK.Platform.Android.AndroidGameView.WindowState" />
         ///   changes.
         /// </summary>
         /// <remarks>
@@ -788,7 +788,7 @@ namespace OpenTK
         /// </param>
         /// <summary>
         ///   Raises the
-        ///   <see cref="E:OpenTK.Platform.Android.AndroidGameView.WindowStateChanged" />
+        ///   <see cref="E:CustomOpenTK.Platform.Android.AndroidGameView.WindowStateChanged" />
         ///   event.
         /// </summary>
         /// <remarks>
@@ -811,17 +811,17 @@ namespace OpenTK
 
         /// <summary>
         ///   Invokes the
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.OnClosed(System.EventArgs)" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.OnClosed(System.EventArgs)" />
         ///   event.
         /// </summary>
         /// <remarks>
         ///   This method only invokes the
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.OnClosed(System.EventArgs)" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.OnClosed(System.EventArgs)" />
         ///   method.
         /// </remarks>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public virtual void Close ()
@@ -925,7 +925,7 @@ namespace OpenTK
         /// </remarks>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public bool Visible {
@@ -954,12 +954,12 @@ namespace OpenTK
         ///   Gets information about the containing window.
         /// </summary>
         /// <value>
-        ///   A <see cref="T:OpenTK.Platform.IWindowInfo" /> which provides
+        ///   A <see cref="T:CustomOpenTK.Platform.IWindowInfo" /> which provides
         ///   information about the containing window.
         /// </value>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The instance has had
-        ///   <see cref="M:OpenTK.Platform.Android.AndroidGameView.Dispose" />
+        ///   <see cref="M:CustomOpenTK.Platform.Android.AndroidGameView.Dispose" />
         ///   invoked on it.
         /// </exception>
         public virtual IWindowInfo WindowInfo {
@@ -972,12 +972,12 @@ namespace OpenTK
         ///   Gets or states the state of the view.
         /// </summary>
         /// <value>
-        ///   A <see cref="T:OpenTK.WindowState" /> value specifying the state of
+        ///   A <see cref="T:CustomOpenTK.WindowState" /> value specifying the state of
         ///   the window.
         /// </value>
         /// <remarks>
         ///   <para>
-        ///     <see cref="F:OpenTK.WindowState.Normal" /> is always returned.
+        ///     <see cref="F:CustomOpenTK.WindowState.Normal" /> is always returned.
         ///   </para>
         /// </remarks>
         /// <exception cref="T:System.NotImplementedException">
@@ -992,15 +992,15 @@ namespace OpenTK
         }
 
         /// <summary>
-        ///   Always returns <see cref="F:OpenTK.WindowBorder.Hidden" />.
+        ///   Always returns <see cref="F:CustomOpenTK.WindowBorder.Hidden" />.
         /// </summary>
         /// <value>
-        ///   A <see cref="T:OpenTK.WindowBorder" /> value controlling the border
+        ///   A <see cref="T:CustomOpenTK.WindowBorder" /> value controlling the border
         ///   of the view.
         /// </value>
         /// <remarks>
         ///   <para>
-        ///     Always returns <see cref="F:OpenTK.WindowBorder.Hidden" />.
+        ///     Always returns <see cref="F:CustomOpenTK.WindowBorder.Hidden" />.
         ///   </para>
         ///   <para>
         ///     The setter is ignored.
@@ -1128,7 +1128,7 @@ namespace OpenTK
             }
         }
 
-        public OpenTK.Input.IInputDriver InputDriver {
+        public CustomOpenTK.Input.IInputDriver InputDriver {
             get {
                 throw new NotSupportedException ();
             }

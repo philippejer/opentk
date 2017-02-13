@@ -29,7 +29,7 @@
 
 using System;
 
-namespace OpenTK.Platform.Linux
+namespace CustomOpenTK.Platform.Linux
 {
     static class Cursors
     {

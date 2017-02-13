@@ -1,4 +1,4 @@
-﻿#region --- OpenTK.OpenAL License ---
+﻿#region --- CustomOpenTK.OpenAL License ---
 /* EfxFunctions.cs
  * C headers: \OpenAL 1.1 SDK\include\ "efx.h", "efx-creative.h", "Efx-Util.h"
  * Spec: Effects Extension Guide.pdf (bundled with OpenAL SDK)
@@ -12,7 +12,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 
-namespace OpenTK.Audio.OpenAL
+namespace CustomOpenTK.Audio.OpenAL
 {
     /// <summary>
     /// Provides access to the OpenAL effects extension.

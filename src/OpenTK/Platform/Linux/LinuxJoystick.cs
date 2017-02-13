@@ -31,9 +31,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.Linux
+namespace CustomOpenTK.Platform.Linux
 {
     struct AxisInfo
     {

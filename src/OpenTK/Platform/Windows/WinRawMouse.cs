@@ -30,10 +30,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
-using OpenTK.Input;
-using OpenTK.Platform.Common;
+using CustomOpenTK.Input;
+using CustomOpenTK.Platform.Common;
 
-namespace OpenTK.Platform.Windows
+namespace CustomOpenTK.Platform.Windows
 {
     /// \internal
     /// <summary>

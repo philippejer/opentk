@@ -26,9 +26,9 @@
 #endregion
 
 using System;
-using OpenTK.Graphics;
+using CustomOpenTK.Graphics;
 
-namespace OpenTK.Platform.SDL2
+namespace CustomOpenTK.Platform.SDL2
 {
     class Sdl2GraphicsMode : IGraphicsMode
     {

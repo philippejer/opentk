@@ -1,5 +1,5 @@
 type project
-id OpenTK.GLWidget
+id CustomOpenTK.GLWidget
 owners
     opentk thefiddler
 authors 

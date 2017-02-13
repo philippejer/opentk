@@ -30,13 +30,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform
+namespace CustomOpenTK.Platform
 {
     /// \internal
     /// <summary>
-    /// Implements IGamePadDriver using OpenTK.Input.Joystick
+    /// Implements IGamePadDriver using CustomOpenTK.Input.Joystick
     /// and a gamepad-specific axis/button mapping.
     /// </summary>
     /// <remarks>
@@ -45,8 +45,8 @@ namespace OpenTK.Platform
     /// </para>
     /// <para>
     /// To support gamepads on platforms that do not offer a gamepad-optimized API,
-    /// we need to use the generic OpenTK.Input.Joystick and implement a custom
-    /// mapping scheme to provide a stable mapping to OpenTK.Input.GamePad. This
+    /// we need to use the generic CustomOpenTK.Input.Joystick and implement a custom
+    /// mapping scheme to provide a stable mapping to CustomOpenTK.Input.GamePad. This
     /// class implements this mapping scheme.
     /// </para>
     /// </remarks>

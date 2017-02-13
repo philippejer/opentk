@@ -32,9 +32,9 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using OpenTK.Platform.MacOS;
+using CustomOpenTK.Platform.MacOS;
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     static class NSApplication
     {

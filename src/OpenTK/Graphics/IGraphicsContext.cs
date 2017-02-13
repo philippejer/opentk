@@ -10,9 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using OpenTK.Platform;
+using CustomOpenTK.Platform;
 
-namespace OpenTK.Graphics
+namespace CustomOpenTK.Graphics
 {
     /// <summary>
     /// Provides methods for creating and interacting with an OpenGL context.
@@ -23,7 +23,7 @@ namespace OpenTK.Graphics
         void SwapBuffers();
 
         /// <summary>Makes the GraphicsContext current in the calling thread.</summary>
-        /// <param name="window">An OpenTK.Platform.IWindowInfo structure that points to a valid window.</param>
+        /// <param name="window">An CustomOpenTK.Platform.IWindowInfo structure that points to a valid window.</param>
         /// <remarks>
         /// <para>OpenGL commands in one thread, affect the GraphicsContext which is current in that thread.</para>
         /// <para>It is an error to issue an OpenGL command in a thread without a current GraphicsContext.</para>
@@ -78,7 +78,7 @@ namespace OpenTK.Graphics
         /// </summary>
         /// <remarks>
         /// <para>It is an error to enable error checking inside a Begin()-End() region.</para>
-        /// <para>This method only affects the debug version of OpenTK.dll.</para>
+        /// <para>This method only affects the debug version of CustomOpenTK.dll.</para>
         /// </remarks>
         bool ErrorChecking { get; set; }
 
@@ -88,11 +88,11 @@ namespace OpenTK.Graphics
         void LoadAll();
     }
 
-    // Functions for internal use by OpenTK.
+    // Functions for internal use by CustomOpenTK.
     // TODO: RegisterForDisposal/DisposeResources for 0.3.15 (GC & OpenGL)
     // TODO: Remove or move GetDisplayModes to another class.
     /// <summary>
-    /// Provides methods to create new GraphicsContexts. Should only be used for extending OpenTK.
+    /// Provides methods to create new GraphicsContexts. Should only be used for extending CustomOpenTK.
     /// </summary>
     public interface IGraphicsContextInternal
     {

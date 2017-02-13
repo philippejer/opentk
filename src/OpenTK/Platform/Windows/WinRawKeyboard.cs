@@ -32,10 +32,10 @@ using System.Runtime.InteropServices;
 #if !(ANDROID || IPHONE || MINIMAL)
 using Microsoft.Win32;
 #endif
-using OpenTK.Input;
-using OpenTK.Platform.Common;
+using CustomOpenTK.Input;
+using CustomOpenTK.Platform.Common;
 
-namespace OpenTK.Platform.Windows
+namespace CustomOpenTK.Platform.Windows
 {
     sealed class WinRawKeyboard : IKeyboardDriver2
     {

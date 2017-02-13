@@ -30,10 +30,10 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using OpenTK.Graphics;
-using OpenTK.Input;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform
+namespace CustomOpenTK.Platform
 {
     /// \internal
     /// <summary>
@@ -119,7 +119,7 @@ namespace OpenTK.Platform
                 }
                 else
                 {
-                    Debug.Print("[OpenTK] {0} leaked with {1} live resources, did you forget to call Dispose()?",
+                    Debug.Print("[CustomOpenTK] {0} leaked with {1} live resources, did you forget to call Dispose()?",
                         GetType().FullName, Resources.Count);
                 }
                 IsDisposed = true;

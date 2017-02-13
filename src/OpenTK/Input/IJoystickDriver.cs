@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK.Input
+namespace CustomOpenTK.Input
 {
     /// <summary>
     /// Defines the interface for JoystickDevice drivers.

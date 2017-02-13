@@ -25,7 +25,7 @@
 // THE SOFTWARE.
 using System;
 
-namespace OpenTK.Input
+namespace CustomOpenTK.Input
 {
     /// <summary>
     /// Enumerates available buttons for a <c>GamePad</c> device.

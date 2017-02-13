@@ -30,9 +30,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.SDL2
+namespace CustomOpenTK.Platform.SDL2
 {
     class Sdl2InputDriver : IInputDriver2
     {

@@ -30,9 +30,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK.Audio
+namespace CustomOpenTK.Audio
 {
-    /// <summary>Represents exceptions related to the OpenTK.Audio subsystem.</summary>
+    /// <summary>Represents exceptions related to the CustomOpenTK.Audio subsystem.</summary>
     public class AudioException : Exception
     {
         /// <summary>Constructs a new AudioException.</summary>

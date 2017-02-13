@@ -27,7 +27,7 @@
 //
 #endregion
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     enum NSEventType
     {

@@ -9,7 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>OpenTK</AssemblyName>
+    <AssemblyName>CustomOpenTK</AssemblyName>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -18,7 +18,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>
     </AppDesignerFolder>
-    <RootNamespace>OpenTK</RootNamespace>
+    <RootNamespace>CustomOpenTK</RootNamespace>
     <StartArguments>
     </StartArguments>
     <FileUpgradeFlags>
@@ -47,7 +47,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE;WIN32;CARBON;X11;SDL2;OPENGL;OPENGLES</DefineConstants>
-    <DocumentationFile>bin\Debug\OpenTK.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\CustomOpenTK.xml</DocumentationFile>
     <FileAlignment>4096</FileAlignment>
     <Optimize>False</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
@@ -64,7 +64,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>TRACE;WIN32;CARBON;X11;SDL2;OPENGL;OPENGLES</DefineConstants>
-    <DocumentationFile>bin\Release\OpenTK.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\CustomOpenTK.xml</DocumentationFile>
     <FileAlignment>4096</FileAlignment>
     <Optimize>True</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -804,10 +804,10 @@
     </PostBuildEvent>
   </PropertyGroup>
   <Target Name="AfterBuild">
-    <Exec Command="$(OutputPath)..\..\..\Generator.Rewrite\bin\Debug\Rewrite.exe $(OutputPath)OpenTK.dll ..\..\OpenTK.snk -debug" Condition="$(OS) == 'Windows_NT' and $(Configuration) == 'Debug'" />
-    <Exec Command="$(OutputPath)..\..\..\Generator.Rewrite\bin\Release\Rewrite.exe $(OutputPath)OpenTK.dll ..\..\OpenTK.snk" Condition="$(OS) == 'Windows_NT' and $(Configuration) == 'Release'" />
-    <Exec Command="mono $(OutputPath)../../../Generator.Rewrite/bin/Debug/Rewrite.exe $(OutputPath)OpenTK.dll ../../OpenTK.snk -debug" Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Debug'" />
-    <Exec Command="mono $(OutputPath)../../../Generator.Rewrite/bin/Release/Rewrite.exe $(OutputPath)OpenTK.dll ../../OpenTK.snk" Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Release'" />
+    <Exec Command="$(OutputPath)..\..\..\Generator.Rewrite\bin\Debug\Rewrite.exe $(OutputPath)CustomOpenTK.dll ..\..\OpenTK.snk -debug" Condition="$(OS) == 'Windows_NT' and $(Configuration) == 'Debug'" />
+    <Exec Command="$(OutputPath)..\..\..\Generator.Rewrite\bin\Release\Rewrite.exe $(OutputPath)CustomOpenTK.dll ..\..\OpenTK.snk" Condition="$(OS) == 'Windows_NT' and $(Configuration) == 'Release'" />
+    <Exec Command="mono $(OutputPath)../../../Generator.Rewrite/bin/Debug/Rewrite.exe $(OutputPath)CustomOpenTK.dll ../../OpenTK.snk -debug" Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Debug'" />
+    <Exec Command="mono $(OutputPath)../../../Generator.Rewrite/bin/Release/Rewrite.exe $(OutputPath)CustomOpenTK.dll ../../OpenTK.snk" Condition="$(OS) != 'Windows_NT' and $(Configuration) == 'Release'" />
   </Target>
   <ProjectExtensions>
     <MonoDevelop>

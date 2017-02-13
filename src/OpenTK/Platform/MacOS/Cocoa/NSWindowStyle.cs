@@ -29,7 +29,7 @@
 
 using System;
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     [Flags]
     enum NSWindowStyle

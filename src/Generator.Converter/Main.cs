@@ -30,7 +30,7 @@ using System.Xml;
 using System.Xml.Linq;
 using Mono.Options;
 
-namespace OpenTK.Convert
+namespace CustomOpenTK.Convert
 {
     class EnumTokenComparer : IEqualityComparer<XNode>
     {

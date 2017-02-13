@@ -29,10 +29,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using OpenTK.Graphics;
-using OpenTK.Platform;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Platform;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     internal interface IGLControl
     {

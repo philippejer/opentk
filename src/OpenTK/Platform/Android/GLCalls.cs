@@ -8,18 +8,18 @@
 #endregion
 
 using System;
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Platform;
-using OpenTK.Platform.Android;
+using CustomOpenTK;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Platform;
+using CustomOpenTK.Platform.Android;
 
-using All  = OpenTK.Graphics.ES11.All;
+using All  = CustomOpenTK.Graphics.ES11.All;
 
-using ES11 = OpenTK.Graphics.ES11;
-using ES20 = OpenTK.Graphics.ES20;
-using ES30 = OpenTK.Graphics.ES30;
+using ES11 = CustomOpenTK.Graphics.ES11;
+using ES20 = CustomOpenTK.Graphics.ES20;
+using ES30 = CustomOpenTK.Graphics.ES30;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     sealed class GLCalls
     {

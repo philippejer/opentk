@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using OpenTK;
+using CustomOpenTK;
 
-namespace OpenTK.Tests
+namespace CustomOpenTK.Tests
 {
     [TestFixture]
     public class Vector3Tests
@@ -422,7 +422,7 @@ namespace OpenTK.Tests
 
             Vector3 input = new Vector3(1, 5, 9);
             Vector3 result = A * input;
-            OpenTK.Vector3 expected = new OpenTK.Vector3(217, 157, 97);
+            CustomOpenTK.Vector3 expected = new CustomOpenTK.Vector3(217, 157, 97);
             Assert.IsTrue(expected == result);
         }
 

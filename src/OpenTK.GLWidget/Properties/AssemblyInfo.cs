@@ -2,8 +2,8 @@
 using System;
 using System.Reflection;
 
-[assembly: AssemblyTitleAttribute("OpenTK.GLWidget")]
-[assembly: AssemblyProductAttribute("OpenTK")]
+[assembly: AssemblyTitleAttribute("CustomOpenTK.GLWidget")]
+[assembly: AssemblyProductAttribute("CustomOpenTK")]
 [assembly: AssemblyDescriptionAttribute("A set of fast, low-level C# bindings for OpenGL, OpenGL ES and OpenAL.")]
 [assembly: AssemblyVersionAttribute("2.0.0")]
 [assembly: AssemblyFileVersionAttribute("2.0.0")]

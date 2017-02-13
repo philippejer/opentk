@@ -27,7 +27,7 @@
 
 using System;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
 
     /// <summary>

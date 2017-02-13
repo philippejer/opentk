@@ -31,7 +31,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     internal class NS
     {

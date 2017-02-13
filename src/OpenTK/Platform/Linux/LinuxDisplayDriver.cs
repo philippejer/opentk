@@ -30,13 +30,13 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using OpenTK;
-using OpenTK.Graphics;
+using CustomOpenTK;
+using CustomOpenTK.Graphics;
 #if !MINIMAL
 using System.Drawing;
 #endif
 
-namespace OpenTK.Platform.Linux
+namespace CustomOpenTK.Platform.Linux
 {
     // Stores platform-specific information about a display
     class LinuxDisplay

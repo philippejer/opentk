@@ -31,9 +31,9 @@ using System.Diagnostics;
 #if !MINIMAL
 using System.Drawing;
 #endif
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.SDL2
+namespace CustomOpenTK.Platform.SDL2
 {
     class Sdl2Mouse : IMouseDriver2
     {

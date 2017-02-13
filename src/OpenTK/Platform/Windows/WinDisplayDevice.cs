@@ -32,7 +32,7 @@ using System.Diagnostics;
 using Microsoft.Win32;
 #endif
 
-namespace OpenTK.Platform.Windows
+namespace CustomOpenTK.Platform.Windows
 {
     sealed class WinDisplayDeviceDriver : DisplayDeviceBase
     {

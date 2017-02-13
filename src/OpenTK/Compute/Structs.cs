@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace OpenTK.Compute
+namespace CustomOpenTK.Compute
 {
     #region struct Handle<T>
 

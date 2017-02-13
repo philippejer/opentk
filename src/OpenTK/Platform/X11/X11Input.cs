@@ -29,9 +29,9 @@
 
 using System;
 using System.Diagnostics;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.X11
+namespace CustomOpenTK.Platform.X11
 {
     class X11Input : IInputDriver2
     {
@@ -44,7 +44,7 @@ namespace OpenTK.Platform.X11
         {
             Debug.WriteLine("Using X11 core input driver.");
             Debug.WriteLine("[Warning] Mouse functionality will be significantly reduced.");
-            Debug.WriteLine("[Warning] Copy OpenTK.dll.config to use the XI2 input driver instead.");
+            Debug.WriteLine("[Warning] Copy CustomOpenTK.dll.config to use the XI2 input driver instead.");
         }
 
         #region IInputDriver2 Members

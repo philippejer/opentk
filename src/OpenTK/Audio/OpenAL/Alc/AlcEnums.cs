@@ -1,4 +1,4 @@
-﻿#region --- OpenTK.OpenAL License ---
+﻿#region --- CustomOpenTK.OpenAL License ---
 /* AlcTokens.cs
  * C header: \OpenAL 1.1 SDK\include\Alc.h
  * Spec: http://www.openal.org/openal_webstf/specs/OpenAL11Specification.pdf
@@ -9,7 +9,7 @@
 
 using System;
 
-namespace OpenTK.Audio.OpenAL
+namespace CustomOpenTK.Audio.OpenAL
 {
     /// <summary>
     /// Defines available context attributes.
@@ -60,7 +60,7 @@ namespace OpenTK.Audio.OpenAL
     }
 
     /// <summary>
-    /// Defines available parameters for <see cref="OpenTK.Audio.OpenAL.Alc.GetString(IntPtr, AlcGetString)"/>.
+    /// Defines available parameters for <see cref="CustomOpenTK.Audio.OpenAL.Alc.GetString(IntPtr, AlcGetString)"/>.
     /// </summary>
     public enum AlcGetString : int
     {

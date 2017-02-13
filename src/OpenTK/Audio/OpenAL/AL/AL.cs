@@ -1,4 +1,4 @@
-﻿#region --- OpenTK.OpenAL License ---
+﻿#region --- CustomOpenTK.OpenAL License ---
 /* AlFunctions.cs
  * C header: \OpenAL 1.1 SDK\include\Al.h
  * Spec: http://www.openal.org/openal_webstf/specs/OpenAL11Specification.pdf
@@ -11,7 +11,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-using OpenTK;
+using CustomOpenTK;
 
 /* Type Mapping
 // 8-bit boolean 
@@ -63,7 +63,7 @@ typedef void ALvoid;
  * void
 */
 
-namespace OpenTK.Audio.OpenAL
+namespace CustomOpenTK.Audio.OpenAL
 {
     /// <summary>
     /// Provides access to the OpenAL 1.1 flat API.

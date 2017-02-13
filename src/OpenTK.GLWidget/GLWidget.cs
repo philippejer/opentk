@@ -32,13 +32,13 @@ using System.Security;
 using System.Threading;
 using System.ComponentModel;
 
-using OpenTK.Graphics;
-using OpenTK.Platform;
-using OpenTK;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Platform;
+using CustomOpenTK;
 
 using Gtk;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     [ToolboxItem(true)]
     public class GLWidget: DrawingArea, IDisposable
@@ -289,11 +289,11 @@ namespace OpenTK
             GraphicsMode graphicsMode = new GraphicsMode(colorBufferColorFormat, DepthBPP, StencilBPP, Samples, accumulationColorFormat, buffers, Stereo);
 
             if (Configuration.RunningOnWindows)
-                Console.WriteLine("OpenTK running on windows");
+                Console.WriteLine("CustomOpenTK running on windows");
             else if (Configuration.RunningOnMacOS)
-                Console.WriteLine("OpenTK running on OSX");
+                Console.WriteLine("CustomOpenTK running on OSX");
             else 
-                Console.WriteLine("OpenTK running on X11");
+                Console.WriteLine("CustomOpenTK running on X11");
 
             // IWindowInfo
             if (Configuration.RunningOnWindows)

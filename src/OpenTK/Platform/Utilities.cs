@@ -12,11 +12,11 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Diagnostics;
-using OpenTK.Graphics;
+using CustomOpenTK.Graphics;
 
 #endregion
 
-namespace OpenTK.Platform
+namespace CustomOpenTK.Platform
 {
     namespace MacOS
     {
@@ -231,7 +231,7 @@ namespace OpenTK.Platform
         /// <param name="minor">The minor OpenGL version number for this IGraphicsContext.</param>
         /// <param name="flags">A bitwise collection of GraphicsContextFlags with specific options for this IGraphicsContext.</param>
         /// <returns>A new IGraphicsContext instance.</returns>
-        [Obsolete("Call new OpenTK.Graphics.GraphicsContext() directly, instead.")]
+        [Obsolete("Call new CustomOpenTK.Graphics.GraphicsContext() directly, instead.")]
         public static IGraphicsContext CreateGraphicsContext(
             GraphicsMode mode, IWindowInfo window,
             int major, int minor, GraphicsContextFlags flags)
@@ -258,7 +258,7 @@ namespace OpenTK.Platform
         public static IWindowInfo CreateX11WindowInfo(IntPtr display, int screen, IntPtr windowHandle, IntPtr rootWindow, IntPtr visualInfo)
         {
             #if X11
-            Platform.X11.X11WindowInfo window = new OpenTK.Platform.X11.X11WindowInfo();
+            Platform.X11.X11WindowInfo window = new CustomOpenTK.Platform.X11.X11WindowInfo();
             window.Display = display;
             window.Screen = screen;
             window.Handle = windowHandle;
@@ -282,7 +282,7 @@ namespace OpenTK.Platform
         public static IWindowInfo CreateWindowsWindowInfo(IntPtr windowHandle)
         {
             #if WIN32
-            return new OpenTK.Platform.Windows.WinWindowInfo(windowHandle, null);
+            return new CustomOpenTK.Platform.Windows.WinWindowInfo(windowHandle, null);
             #else
             return new Dummy.DummyWindowInfo();
             #endif
@@ -319,9 +319,9 @@ namespace OpenTK.Platform
         /// <param name="yOffset">The Y offset for the GL viewport</param>
         /// <returns>A new IWindowInfo instance.</returns>
         public static IWindowInfo CreateMacOSCarbonWindowInfo(IntPtr windowHandle, bool ownHandle, bool isControl, 
-            OpenTK.Platform.MacOS.GetInt xOffset, OpenTK.Platform.MacOS.GetInt yOffset)
+            CustomOpenTK.Platform.MacOS.GetInt xOffset, CustomOpenTK.Platform.MacOS.GetInt yOffset)
         {
-            return new OpenTK.Platform.MacOS.CarbonWindowInfo(windowHandle, false, isControl, xOffset, yOffset);
+            return new CustomOpenTK.Platform.MacOS.CarbonWindowInfo(windowHandle, false, isControl, xOffset, yOffset);
         }
         #endif
 
@@ -338,7 +338,7 @@ namespace OpenTK.Platform
         public static IWindowInfo CreateMacOSWindowInfo(IntPtr windowHandle)
         {
             #if CARBON
-            return new OpenTK.Platform.MacOS.CocoaWindowInfo(windowHandle);
+            return new CustomOpenTK.Platform.MacOS.CocoaWindowInfo(windowHandle);
             #else
             return new Dummy.DummyWindowInfo();
             #endif
@@ -353,7 +353,7 @@ namespace OpenTK.Platform
         public static IWindowInfo CreateMacOSWindowInfo(IntPtr windowHandle, IntPtr viewHandle)
         {
             #if CARBON
-            return new OpenTK.Platform.MacOS.CocoaWindowInfo(windowHandle, viewHandle);
+            return new CustomOpenTK.Platform.MacOS.CocoaWindowInfo(windowHandle, viewHandle);
             #else
             return new Dummy.DummyWindowInfo();
             #endif
@@ -384,7 +384,7 @@ namespace OpenTK.Platform
         public static IWindowInfo CreateSdl2WindowInfo(IntPtr windowHandle)
         {
             #if SDL2
-            return new OpenTK.Platform.SDL2.Sdl2WindowInfo(
+            return new CustomOpenTK.Platform.SDL2.Sdl2WindowInfo(
                 windowHandle, null);
             #else
             return new Dummy.DummyWindowInfo();

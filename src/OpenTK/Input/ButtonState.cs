@@ -25,7 +25,7 @@
  //
  #endregion
 
-namespace OpenTK.Input
+namespace CustomOpenTK.Input
 {
     /// <summary>
     /// Enumerates possible mouse button states.

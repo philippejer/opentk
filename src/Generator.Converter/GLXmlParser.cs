@@ -32,7 +32,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace OpenTK.Convert
+namespace CustomOpenTK.Convert
 {
     static class Extension
     {

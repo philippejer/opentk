@@ -32,16 +32,16 @@ using System.Diagnostics;
 using System.Drawing;
 #endif
 #if ANDROID || IPHONE || MINIMAL
-using OpenTK.Minimal;
+using CustomOpenTK.Minimal;
 #else
 using System.Drawing.Imaging;
 #endif
 using System.Runtime.InteropServices;
-using OpenTK;
-using OpenTK.Input;
+using CustomOpenTK;
+using CustomOpenTK.Input;
 using System.Text;
 
-namespace OpenTK.Platform.SDL2
+namespace CustomOpenTK.Platform.SDL2
 {
     class Sdl2NativeWindow : NativeWindowBase
     {

@@ -13,10 +13,10 @@ using System.Drawing;
 #endif
 using System.Text;
 
-using OpenTK.Input;
-using OpenTK.Graphics;
+using CustomOpenTK.Input;
+using CustomOpenTK.Graphics;
 
-namespace OpenTK.Platform
+namespace CustomOpenTK.Platform
 {
     [Obsolete]
     internal interface INativeGLWindow : IDisposable

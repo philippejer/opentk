@@ -19,18 +19,18 @@ using OpenGLES;
 using UIKit;
 using ObjCRuntime;
 
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Input;
-using OpenTK.Platform;
-using OpenTK.Platform.iPhoneOS;
+using CustomOpenTK;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Input;
+using CustomOpenTK.Platform;
+using CustomOpenTK.Platform.iPhoneOS;
 
-using All  = OpenTK.Graphics.ES11.All;
-using ES11 = OpenTK.Graphics.ES11;
-using ES20 = OpenTK.Graphics.ES20;
-using ES30 = OpenTK.Graphics.ES30;
+using All  = CustomOpenTK.Graphics.ES11.All;
+using ES11 = CustomOpenTK.Graphics.ES11;
+using ES20 = CustomOpenTK.Graphics.ES20;
+using ES30 = CustomOpenTK.Graphics.ES30;
 
-namespace OpenTK.Platform.iPhoneOS
+namespace CustomOpenTK.Platform.iPhoneOS
 {
     sealed class GLCalls {
         public delegate void glBindFramebuffer(All target, int framebuffer);
@@ -940,7 +940,7 @@ namespace OpenTK.Platform.iPhoneOS
         public event EventHandler<FrameEventArgs> UpdateFrame;
         public event EventHandler<FrameEventArgs> RenderFrame;
 
-        public OpenTK.Input.IInputDriver InputDriver
+        public CustomOpenTK.Input.IInputDriver InputDriver
         {
             get
             {

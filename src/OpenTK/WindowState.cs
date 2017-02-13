@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     /// <summary>
     /// Enumerates available window states.

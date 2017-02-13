@@ -30,9 +30,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-using OpenTK.Platform;
+using CustomOpenTK.Platform;
 
-namespace OpenTK.Graphics
+namespace CustomOpenTK.Graphics
 {
     /// <summary>
     /// Represents and provides methods to manipulate an OpenGL render context.
@@ -79,8 +79,8 @@ namespace OpenTK.Graphics
         /// <summary>
         /// Constructs a new GraphicsContext with the specified GraphicsMode and attaches it to the specified window.
         /// </summary>
-        /// <param name="mode">The OpenTK.Graphics.GraphicsMode of the GraphicsContext.</param>
-        /// <param name="window">The OpenTK.Platform.IWindowInfo to attach the GraphicsContext to.</param>
+        /// <param name="mode">The CustomOpenTK.Graphics.GraphicsMode of the GraphicsContext.</param>
+        /// <param name="window">The CustomOpenTK.Platform.IWindowInfo to attach the GraphicsContext to.</param>
         public GraphicsContext(GraphicsMode mode, IWindowInfo window)
             : this(mode, window, 1, 0, GraphicsContextFlags.Default)
         { }
@@ -88,8 +88,8 @@ namespace OpenTK.Graphics
         /// <summary>
         /// Constructs a new GraphicsContext with the specified GraphicsMode, version and flags,  and attaches it to the specified window.
         /// </summary>
-        /// <param name="mode">The OpenTK.Graphics.GraphicsMode of the GraphicsContext.</param>
-        /// <param name="window">The OpenTK.Platform.IWindowInfo to attach the GraphicsContext to.</param>
+        /// <param name="mode">The CustomOpenTK.Graphics.GraphicsMode of the GraphicsContext.</param>
+        /// <param name="window">The CustomOpenTK.Platform.IWindowInfo to attach the GraphicsContext to.</param>
         /// <param name="major">The major version of the new GraphicsContext.</param>
         /// <param name="minor">The minor version of the new GraphicsContext.</param>
         /// <param name="flags">The GraphicsContextFlags for the GraphicsContext.</param>
@@ -163,7 +163,7 @@ namespace OpenTK.Graphics
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OpenTK.Graphics.GraphicsContext"/> class using
+        /// Initializes a new instance of the <see cref="CustomOpenTK.Graphics.GraphicsContext"/> class using
         /// an external context handle that was created by a third-party library.
         /// </summary>
         /// <param name="handle">
@@ -221,18 +221,18 @@ namespace OpenTK.Graphics
         }
 
         /// <summary>
-        /// Constructs a new GraphicsContext from a pre-existing context created outside of OpenTK.
+        /// Constructs a new GraphicsContext from a pre-existing context created outside of CustomOpenTK.
         /// </summary>
-        /// <param name="handle">The handle of the existing context. This must be a valid, unique handle that is not known to OpenTK.</param>
+        /// <param name="handle">The handle of the existing context. This must be a valid, unique handle that is not known to CustomOpenTK.</param>
         /// <param name="window">This parameter is reserved.</param>
         public GraphicsContext(ContextHandle handle, IWindowInfo window)
             : this(handle, window, null, 1, 0, GraphicsContextFlags.Default)
         { }
 
         /// <summary>
-        /// Constructs a new GraphicsContext from a pre-existing context created outside of OpenTK.
+        /// Constructs a new GraphicsContext from a pre-existing context created outside of CustomOpenTK.
         /// </summary>
-        /// <param name="handle">The handle of the existing context. This must be a valid, unique handle that is not known to OpenTK.</param>
+        /// <param name="handle">The handle of the existing context. This must be a valid, unique handle that is not known to CustomOpenTK.</param>
         /// <param name="window">This parameter is reserved.</param>
         /// <param name="shareContext">This parameter is reserved.</param>
         /// <param name="major">This parameter is reserved.</param>
@@ -459,7 +459,7 @@ namespace OpenTK.Graphics
 
         /// <summary>
         /// Gets or sets a System.Boolean, indicating whether automatic error checking should be performed.
-        /// Influences the debug version of OpenTK.dll, only.
+        /// Influences the debug version of CustomOpenTK.dll, only.
         /// </summary>
         /// <remarks>Automatic error checking will clear the OpenGL error state. Set CheckErrors to false if you use
         /// the OpenGL error state in your code flow (e.g. for checking supported texture formats).</remarks>
@@ -480,7 +480,7 @@ namespace OpenTK.Graphics
         /// <summary>
         /// Makes the GraphicsContext the current rendering target.
         /// </summary>
-        /// <param name="window">A valid <see cref="OpenTK.Platform.IWindowInfo" /> structure.</param>
+        /// <param name="window">A valid <see cref="CustomOpenTK.Platform.IWindowInfo" /> structure.</param>
         /// <remarks>
         /// You can use this method to bind the GraphicsContext to a different window than the one it was created from.
         /// </remarks>
@@ -553,7 +553,7 @@ namespace OpenTK.Graphics
         /// <summary>
         /// Loads all OpenGL entry points.
         /// </summary>
-        /// <exception cref="OpenTK.Graphics.GraphicsContextException">
+        /// <exception cref="CustomOpenTK.Graphics.GraphicsContextException">
         /// Occurs when this instance is not current on the calling thread.
         /// </exception>
         public void LoadAll()

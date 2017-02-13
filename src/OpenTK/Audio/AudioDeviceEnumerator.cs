@@ -30,9 +30,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
-using OpenTK.Audio.OpenAL;
+using CustomOpenTK.Audio.OpenAL;
 
-namespace OpenTK.Audio
+namespace CustomOpenTK.Audio
 {
     internal static class AudioDeviceEnumerator
     {

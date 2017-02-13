@@ -35,9 +35,9 @@ using System.Drawing;
 #endif
 using System.Runtime.InteropServices;
 using System.Threading;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.Linux
+namespace CustomOpenTK.Platform.Linux
 {
     class LinuxInput : IKeyboardDriver2, IMouseDriver2, IDisposable
     {

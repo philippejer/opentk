@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK.Graphics
+namespace CustomOpenTK.Graphics
 {
     /// <summary>
     /// Represents errors related to unavailable graphics parameters.

@@ -8,12 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK.Input
+namespace CustomOpenTK.Input
 {
     /// <summary>
     /// Defines the interface for an input driver.
     /// </summary>
-    [Obsolete("This interface has been replaced by OpenTK.Input.Keyboard, Mouse, Joystick and GamePad.")]
+    [Obsolete("This interface has been replaced by CustomOpenTK.Input.Keyboard, Mouse, Joystick and GamePad.")]
     public interface IInputDriver : IKeyboardDriver, IMouseDriver, IJoystickDriver, IDisposable
     {
         /// <summary>

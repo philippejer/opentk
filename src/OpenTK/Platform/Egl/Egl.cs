@@ -29,9 +29,9 @@ using System;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text;
-using OpenTK.Graphics;
+using CustomOpenTK.Graphics;
 
-namespace OpenTK.Platform.Egl
+namespace CustomOpenTK.Platform.Egl
 {
     using EGLNativeDisplayType = IntPtr;
     using EGLNativeWindowType = IntPtr;

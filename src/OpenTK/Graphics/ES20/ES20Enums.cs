@@ -27,7 +27,7 @@
 
 using System;
 
-namespace OpenTK.Graphics.ES20
+namespace CustomOpenTK.Graphics.ES20
 {
     /// <summary>
     /// Not used directly.

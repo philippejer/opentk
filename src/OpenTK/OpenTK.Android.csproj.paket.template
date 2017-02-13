@@ -1,5 +1,5 @@
 type project
-id OpenTK.Android
+id CustomOpenTK.Android
 owners
     opentk thefiddler
 authors 

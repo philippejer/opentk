@@ -27,10 +27,10 @@
 
 using System;
 using System.Diagnostics;
-using OpenTK;
-using OpenTK.Graphics;
+using CustomOpenTK;
+using CustomOpenTK.Graphics;
 
-namespace OpenTK.Platform.SDL2
+namespace CustomOpenTK.Platform.SDL2
 {
     class Sdl2GraphicsContext : DesktopGraphicsContext
     {
@@ -58,7 +58,7 @@ namespace OpenTK.Platform.SDL2
         public Sdl2GraphicsContext(GraphicsMode mode,
             IWindowInfo win, IGraphicsContext shareContext,
             int major, int minor,
-            OpenTK.Graphics.GraphicsContextFlags flags)
+            CustomOpenTK.Graphics.GraphicsContextFlags flags)
             : this(win)
         {
             lock (SDL.Sync)

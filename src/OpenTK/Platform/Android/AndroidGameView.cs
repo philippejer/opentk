@@ -16,19 +16,19 @@ using System.Timers;
 using System.Threading;
 using System.Threading.Tasks;
 
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Platform;
-using OpenTK.Platform.Android;
+using CustomOpenTK;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Platform;
+using CustomOpenTK.Platform.Android;
 
 using Android.Content;
 using Android.Util;
 using Android.Views;
 using Android.Runtime;
 using Android.Graphics;
-using OpenTK.Platform.Egl;
+using CustomOpenTK.Platform.Egl;
 
-namespace OpenTK.Platform.Android
+namespace CustomOpenTK.Platform.Android
 {
     [Register ("opentk_1_1/platform/android/AndroidGameView")]
     public partial class AndroidGameView : GameViewBase, ISurfaceHolderCallback
@@ -128,7 +128,7 @@ namespace OpenTK.Platform.Android
             surfaceRect = holder.SurfaceFrame;
             size = new Size (surfaceRect.Right - surfaceRect.Left, surfaceRect.Bottom - surfaceRect.Top);
 
-            if (OpenTK.Graphics.GraphicsContext.CurrentContextHandle.Handle != IntPtr.Zero && RenderOnUIThread) {
+            if (CustomOpenTK.Graphics.GraphicsContext.CurrentContextHandle.Handle != IntPtr.Zero && RenderOnUIThread) {
                 GLCalls.Viewport (0, 0, size.Width, size.Height);
                 GLCalls.Scissor (0, 0, size.Width, size.Height);
             }
@@ -624,7 +624,7 @@ namespace OpenTK.Platform.Android
         }
 
         /// <summary>Gets information about the containing window.</summary>
-        /// <value>By default, returns an instance of <see cref="F:OpenTK.Platform.Android.AndroidWindow" /></value>
+        /// <value>By default, returns an instance of <see cref="F:CustomOpenTK.Platform.Android.AndroidWindow" /></value>
         /// <exception cref="T:System.ObjectDisposed">The instance has been disposed</exception>
         public override IWindowInfo WindowInfo {
             get {
@@ -633,7 +633,7 @@ namespace OpenTK.Platform.Android
             }
         }
 
-        /// <summary>Always returns <see cref="F:OpenTK.WindowState.Normal" />.</summary>
+        /// <summary>Always returns <see cref="F:CustomOpenTK.WindowState.Normal" />.</summary>
         /// <value></value>
         /// <exception cref="T:System.ObjectDisposed">The instance has been disposed</exception>
         public override WindowState WindowState {
@@ -644,7 +644,7 @@ namespace OpenTK.Platform.Android
             set {}
         }
 
-        /// <summary>Always returns <see cref="F:OpenTK.WindowBorder.Hidden" />.</summary>
+        /// <summary>Always returns <see cref="F:CustomOpenTK.WindowBorder.Hidden" />.</summary>
         /// <value></value>
         /// <exception cref="T:System.ObjectDisposed">The instance has been disposed</exception>
         public override WindowBorder WindowBorder {

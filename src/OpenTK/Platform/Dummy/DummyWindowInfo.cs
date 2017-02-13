@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK.Platform.Dummy
+namespace CustomOpenTK.Platform.Dummy
 {
     class DummyWindowInfo : IWindowInfo
     {

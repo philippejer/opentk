@@ -34,7 +34,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 #endif
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     static class Cocoa
     {

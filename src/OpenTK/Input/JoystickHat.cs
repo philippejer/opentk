@@ -29,7 +29,7 @@
 
 using System;
 
-namespace OpenTK.Input
+namespace CustomOpenTK.Input
 {
     /// <summary>
     /// Defines available Joystick hats.

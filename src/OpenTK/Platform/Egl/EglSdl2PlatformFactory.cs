@@ -26,15 +26,15 @@
 #endregion
 
 using System;
-using OpenTK.Graphics;
-using OpenTK.Platform.SDL2;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Platform.SDL2;
 
-namespace OpenTK.Platform.Egl
+namespace CustomOpenTK.Platform.Egl
 {
 
     class EglSdl2PlatformFactory : Sdl2Factory
     {
-        public override OpenTK.Graphics.IGraphicsContext CreateGLContext(
+        public override CustomOpenTK.Graphics.IGraphicsContext CreateGLContext(
             GraphicsMode mode, IWindowInfo window, IGraphicsContext shareContext, bool directRendering,
             int major, int minor, GraphicsContextFlags flags)
         {

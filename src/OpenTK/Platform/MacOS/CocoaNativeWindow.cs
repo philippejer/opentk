@@ -35,10 +35,10 @@ using System.Drawing;
 #endif
 using System.Runtime.InteropServices;
 using System.Threading;
-using OpenTK.Graphics;
-using OpenTK.Input;
+using CustomOpenTK.Graphics;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     class CocoaNativeWindow : NativeWindowBase
     {
@@ -168,7 +168,7 @@ namespace OpenTK.Platform.MacOS
 
             // Create the window class
             int unique_id = Interlocked.Increment(ref UniqueId);
-            windowClass = Class.AllocateClass("OpenTK_GameWindow" + unique_id, "NSWindow");
+            windowClass = Class.AllocateClass("CustomOpenTK_GameWindow" + unique_id, "NSWindow");
             Class.RegisterMethod(windowClass, WindowKeyDownHandler, "keyDown:", "v@:@");
             Class.RegisterMethod(windowClass, WindowDidResizeHandler, "windowDidResize:", "v@:@");
             Class.RegisterMethod(windowClass, WindowDidMoveHandler, "windowDidMove:", "v@:@");
@@ -184,7 +184,7 @@ namespace OpenTK.Platform.MacOS
             Class.RegisterMethod(windowClass, CanBecomeMainWindowHandler, "canBecomeMainWindow", "b@:");
             Class.RegisterClass(windowClass);
 
-            IntPtr viewClass = Class.AllocateClass("OpenTK_NSView" + unique_id, "NSView");
+            IntPtr viewClass = Class.AllocateClass("CustomOpenTK_NSView" + unique_id, "NSView");
             Class.RegisterMethod(viewClass, ResetCursorRectsHandler, "resetCursorRects", "v@:");
             Class.RegisterClass(viewClass);
 
@@ -530,10 +530,10 @@ namespace OpenTK.Platform.MacOS
 
         private KeyModifiers GetModifiers(NSEventModifierMask mask)
         {
-            OpenTK.Input.KeyModifiers modifiers = 0;
-            if ((mask & NSEventModifierMask.ControlKeyMask) != 0) modifiers |= OpenTK.Input.KeyModifiers.Control;
-            if ((mask & NSEventModifierMask.ShiftKeyMask) != 0) modifiers |= OpenTK.Input.KeyModifiers.Shift;
-            if ((mask & NSEventModifierMask.AlternateKeyMask) != 0) modifiers |= OpenTK.Input.KeyModifiers.Alt;
+            CustomOpenTK.Input.KeyModifiers modifiers = 0;
+            if ((mask & NSEventModifierMask.ControlKeyMask) != 0) modifiers |= CustomOpenTK.Input.KeyModifiers.Control;
+            if ((mask & NSEventModifierMask.ShiftKeyMask) != 0) modifiers |= CustomOpenTK.Input.KeyModifiers.Shift;
+            if ((mask & NSEventModifierMask.AlternateKeyMask) != 0) modifiers |= CustomOpenTK.Input.KeyModifiers.Alt;
             return modifiers;
         }
 

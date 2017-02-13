@@ -29,9 +29,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     using Graphics;
 
@@ -96,7 +96,7 @@ namespace OpenTK.Platform.MacOS
             return InputDriver.JoystickDriver;
         }
 
-        public override OpenTK.Input.IGamePadDriver CreateGamePadDriver()
+        public override CustomOpenTK.Input.IGamePadDriver CreateGamePadDriver()
         {
             return new MappedGamePadDriver();
         }

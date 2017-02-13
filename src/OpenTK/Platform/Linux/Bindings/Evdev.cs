@@ -30,9 +30,9 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform.Linux
+namespace CustomOpenTK.Platform.Linux
 {
     // Bindings for linux/input.h
     class Evdev

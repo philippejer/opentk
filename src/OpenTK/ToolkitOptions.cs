@@ -29,29 +29,29 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenTK
+namespace CustomOpenTK
 {
     /// <summary>
-    /// Enumerates options regarding OpenTK.Platform
+    /// Enumerates options regarding CustomOpenTK.Platform
     /// implementations.
     /// </summary>
     public enum PlatformBackend
     {
         /// <summary>
-        /// Select the optimal OpenTK.Platform implementation
+        /// Select the optimal CustomOpenTK.Platform implementation
         /// for the current operating system. This is the default
         /// option.
         /// </summary>
         Default = 0,
         /// <summary>
-        /// Prefer native OpenTK.Platform implementations. 
+        /// Prefer native CustomOpenTK.Platform implementations. 
         /// Platform abstractions such as SDL will not be considered,
         /// even if available. Use this if you need support for multiple
         /// mice or keyboards.
         /// </summary>
         PreferNative,
         /// <summary>
-        /// Prefer an X11 OpenTK.Platform implementation,
+        /// Prefer an X11 CustomOpenTK.Platform implementation,
         /// even if a different implementation is available. This option
         /// allows you to use X11 on Windows or Mac OS X when an
         /// X11 server is installed. 
@@ -60,7 +60,7 @@ namespace OpenTK
     }
 
     /// <summary>
-    /// Contains configuration options for OpenTK.
+    /// Contains configuration options for CustomOpenTK.
     /// <see cref="Toolkit.Init(ToolkitOptions)"/>
     /// </summary>
     public class ToolkitOptions
@@ -73,7 +73,7 @@ namespace OpenTK
 
         /// <summary>
         /// Get or set the desired <c>PlatformBackend</c>
-        /// for the OpenTK.Platform implementation.
+        /// for the CustomOpenTK.Platform implementation.
         /// </summary>
         public PlatformBackend Backend { get; set; }
 

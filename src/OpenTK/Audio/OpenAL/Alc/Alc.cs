@@ -1,4 +1,4 @@
-﻿#region --- OpenTK.OpenAL License ---
+﻿#region --- CustomOpenTK.OpenAL License ---
 /* AlcFunctions.cs
  * C header: \OpenAL 1.1 SDK\include\Alc.h
  * Spec: http://www.openal.org/openal_webstf/specs/OpenAL11Specification.pdf
@@ -67,7 +67,7 @@ typedef void ALCvoid;
  * IntPtr
 */
 
-namespace OpenTK.Audio.OpenAL
+namespace CustomOpenTK.Audio.OpenAL
 {
 
     /// <summary>Alc = Audio Library Context</summary>

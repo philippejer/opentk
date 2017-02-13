@@ -29,10 +29,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using OpenTK.Input;
-using OpenTK.Platform.Common;
+using CustomOpenTK.Input;
+using CustomOpenTK.Platform.Common;
 
-namespace OpenTK.Platform.MacOS
+namespace CustomOpenTK.Platform.MacOS
 {
     using Carbon;
     using CFAllocatorRef = System.IntPtr;
@@ -528,7 +528,7 @@ namespace OpenTK.Platform.MacOS
                     break;
 
                 case HIDPage.Button:
-                    mouse.State[OpenTK.Input.MouseButton.Left + usage - 1] = v_int == 1;
+                    mouse.State[CustomOpenTK.Input.MouseButton.Left + usage - 1] = v_int == 1;
                     break;
 
                 case HIDPage.Consumer:
@@ -1493,7 +1493,7 @@ namespace OpenTK.Platform.MacOS
             //_Reserved = 0xFFFF
         }
 
-        // Maps HIDKey to OpenTK.Input.Key.
+        // Maps HIDKey to CustomOpenTK.Input.Key.
         static readonly Key[] RawKeyMap = new Key[]
         {
             Key.Unknown,

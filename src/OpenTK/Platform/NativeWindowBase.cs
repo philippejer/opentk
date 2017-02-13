@@ -33,9 +33,9 @@ using System.Diagnostics;
 #if !MINIMAL
 using System.Drawing;
 #endif
-using OpenTK.Input;
+using CustomOpenTK.Input;
 
-namespace OpenTK.Platform
+namespace CustomOpenTK.Platform
 {
     // Common base class for all INativeWindow implementations
     abstract class NativeWindowBase : INativeWindow

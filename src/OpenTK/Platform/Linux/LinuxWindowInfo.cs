@@ -29,9 +29,9 @@
 
 using System;
 using System.Diagnostics;
-using OpenTK.Platform.Egl;
+using CustomOpenTK.Platform.Egl;
 
-namespace OpenTK.Platform.Linux
+namespace CustomOpenTK.Platform.Linux
 {
     class LinuxWindowInfo : EglWindowInfo
     {
