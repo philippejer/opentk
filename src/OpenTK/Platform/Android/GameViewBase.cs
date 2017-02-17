@@ -18,12 +18,12 @@ using CustomOpenTK.Platform;
 using CustomOpenTK.Platform.Android;
 
 using Android.Content;
-using Android.Util;
 using Android.Views;
 using Android.Runtime;
-
+using Android.Util;
 using Java.Util;
 using CustomOpenTK.Input;
+using Size = System.Drawing.Size;
 
 namespace CustomOpenTK
 {

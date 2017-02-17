@@ -82,6 +82,9 @@ namespace CustomOpenTK.Rewrite
             }
             read_params.SymbolReaderProvider = provider;
             read_params.ReadSymbols = true;
+            var resolver = new DefaultAssemblyResolver();
+            resolver.AddSearchDirectory(@"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v6.0");
+            read_params.AssemblyResolver = resolver;
             write_params.WriteSymbols = true;
 
             if (!String.IsNullOrEmpty(keyfile) && File.Exists(keyfile))

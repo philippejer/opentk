@@ -9,7 +9,6 @@
 
 using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Timers;
@@ -22,11 +21,12 @@ using CustomOpenTK.Platform;
 using CustomOpenTK.Platform.Android;
 
 using Android.Content;
-using Android.Util;
 using Android.Views;
 using Android.Runtime;
 using Android.Graphics;
+using Android.Util;
 using CustomOpenTK.Platform.Egl;
+using Size = System.Drawing.Size;
 
 namespace CustomOpenTK.Platform.Android
 {
