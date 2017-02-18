@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     /// \internal
     /// <summary>

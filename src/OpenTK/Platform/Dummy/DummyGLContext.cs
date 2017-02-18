@@ -11,9 +11,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.Dummy
+namespace OpenTK.Platform.Dummy
 {
     /// \internal
     /// <summary>
@@ -103,13 +103,13 @@ namespace CustomOpenTK.Platform.Dummy
         public override void LoadAll()
         {
             #if OPENGL
-            new CustomOpenTK.Graphics.OpenGL.GL().LoadEntryPoints();
-            new CustomOpenTK.Graphics.OpenGL4.GL().LoadEntryPoints();
+            new OpenTK.Graphics.OpenGL.GL().LoadEntryPoints();
+            new OpenTK.Graphics.OpenGL4.GL().LoadEntryPoints();
             #endif
             #if OPENGLES
-            new CustomOpenTK.Graphics.ES11.GL().LoadEntryPoints();
-            new CustomOpenTK.Graphics.ES20.GL().LoadEntryPoints();
-            new CustomOpenTK.Graphics.ES30.GL().LoadEntryPoints();
+            new OpenTK.Graphics.ES11.GL().LoadEntryPoints();
+            new OpenTK.Graphics.ES20.GL().LoadEntryPoints();
+            new OpenTK.Graphics.ES30.GL().LoadEntryPoints();
             #endif
         }
 

@@ -12,12 +12,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
-    /// Contains mathematical functions for the CustomOpenTK.Math toolkit.
+    /// Contains mathematical functions for the OpenTK.Math toolkit.
     /// </summary>
-    [Obsolete("Use CustomOpenTK.MathHelper instead.")]
+    [Obsolete("Use OpenTK.MathHelper instead.")]
     public static class Functions
     {
         #region NextPowerOfTwo

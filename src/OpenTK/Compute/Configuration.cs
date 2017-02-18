@@ -27,7 +27,7 @@
 
 using System;
 
-namespace CustomOpenTK.Compute
+namespace OpenTK.Compute
 {
 
 }

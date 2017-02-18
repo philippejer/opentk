@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
 
     /// <summary>2-component Vector of the Half type. Occupies 4 Byte total.</summary>
@@ -104,7 +104,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half2 instance will convert the Vector2 into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2</param>
+        /// <param name="v">OpenTK.Vector2</param>
         [CLSCompliant(false)]
         public Vector2h(Vector2 v)
         {
@@ -115,7 +115,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half2 instance will convert the Vector2 into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2</param>
+        /// <param name="v">OpenTK.Vector2</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         [CLSCompliant(false)]
         public Vector2h(Vector2 v, bool throwOnError)
@@ -128,7 +128,7 @@ namespace CustomOpenTK
         /// The new Half2 instance will convert the Vector2 into 16-bit half-precision floating-point.
         /// This is the fastest constructor.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2</param>
+        /// <param name="v">OpenTK.Vector2</param>
         public Vector2h(ref Vector2 v)
         {
             X = new Half(v.X);
@@ -138,7 +138,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half2 instance will convert the Vector2 into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2</param>
+        /// <param name="v">OpenTK.Vector2</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         public Vector2h(ref Vector2 v, bool throwOnError)
         {
@@ -149,7 +149,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half2 instance will convert the Vector2d into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2d</param>
+        /// <param name="v">OpenTK.Vector2d</param>
         [CLSCompliant(false)]
         public Vector2h(Vector2d v)
         {
@@ -160,7 +160,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half2 instance will convert the Vector2d into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2d</param>
+        /// <param name="v">OpenTK.Vector2d</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         [CLSCompliant(false)]
         public Vector2h(Vector2d v, bool throwOnError)
@@ -173,7 +173,7 @@ namespace CustomOpenTK
         /// The new Half2 instance will convert the Vector2d into 16-bit half-precision floating-point.
         /// This is the faster constructor.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2d</param>
+        /// <param name="v">OpenTK.Vector2d</param>
         [CLSCompliant(false)]
         public Vector2h(ref Vector2d v)
         {
@@ -184,7 +184,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half2 instance will convert the Vector2d into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector2d</param>
+        /// <param name="v">OpenTK.Vector2d</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         [CLSCompliant(false)]
         public Vector2h(ref Vector2d v, bool throwOnError)
@@ -198,7 +198,7 @@ namespace CustomOpenTK
         #region Swizzle
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the Y and X components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the Y and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Yx { get { return new Vector2h(Y, X); } set { Y = value.X; X = value.Y; } }
@@ -210,7 +210,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Returns this Half2 instance's contents as Vector2.
         /// </summary>
-        /// <returns>CustomOpenTK.Vector2</returns>
+        /// <returns>OpenTK.Vector2</returns>
         public Vector2 ToVector2()
         {
             return new Vector2(X, Y);
@@ -228,7 +228,7 @@ namespace CustomOpenTK
 
         #region Conversions
 
-        /// <summary>Converts CustomOpenTK.Vector2 to CustomOpenTK.Half2.</summary>
+        /// <summary>Converts OpenTK.Vector2 to OpenTK.Half2.</summary>
         /// <param name="v">The Vector2 to convert.</param>
         /// <returns>The resulting Half vector.</returns>
         public static explicit operator Vector2h(Vector2 v)
@@ -236,7 +236,7 @@ namespace CustomOpenTK
             return new Vector2h(v);
         }
 
-        /// <summary>Converts CustomOpenTK.Vector2d to CustomOpenTK.Half2.</summary>
+        /// <summary>Converts OpenTK.Vector2d to OpenTK.Half2.</summary>
         /// <param name="v">The Vector2d to convert.</param>
         /// <returns>The resulting Half vector.</returns>
         public static explicit operator Vector2h(Vector2d v)
@@ -244,7 +244,7 @@ namespace CustomOpenTK
             return new Vector2h(v);
         }
 
-        /// <summary>Converts CustomOpenTK.Half2 to CustomOpenTK.Vector2.</summary>
+        /// <summary>Converts OpenTK.Half2 to OpenTK.Vector2.</summary>
         /// <param name="h">The Half2 to convert.</param>
         /// <returns>The resulting Vector2.</returns>
         public static explicit operator Vector2(Vector2h h)
@@ -252,7 +252,7 @@ namespace CustomOpenTK
             return new Vector2(h.X, h.Y);
         }
 
-        /// <summary>Converts CustomOpenTK.Half2 to CustomOpenTK.Vector2d.</summary>
+        /// <summary>Converts OpenTK.Half2 to OpenTK.Vector2d.</summary>
         /// <param name="h">The Half2 to convert.</param>
         /// <returns>The resulting Vector2d.</returns>
         public static explicit operator Vector2d(Vector2h h)
@@ -313,8 +313,8 @@ namespace CustomOpenTK
 
         #region IEquatable<Half2> Members
 
-        /// <summary>Returns a value indicating whether this instance is equal to a specified CustomOpenTK.Half2 vector.</summary>
-        /// <param name="other">CustomOpenTK.Half2 to compare to this instance..</param>
+        /// <summary>Returns a value indicating whether this instance is equal to a specified OpenTK.Half2 vector.</summary>
+        /// <param name="other">OpenTK.Half2 to compare to this instance..</param>
         /// <returns>True, if other is equal to this instance; false otherwise.</returns>
         public bool Equals(Vector2h other)
         {

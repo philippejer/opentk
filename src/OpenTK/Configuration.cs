@@ -33,7 +33,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Provides information about the underlying OS and runtime.
@@ -314,7 +314,7 @@ namespace CustomOpenTK
         {
             #if X11
             // Detect whether X is present.
-            try { return CustomOpenTK.Platform.X11.API.DefaultDisplay != IntPtr.Zero; }
+            try { return OpenTK.Platform.X11.API.DefaultDisplay != IntPtr.Zero; }
             catch { return false; }
             #else
             return false;

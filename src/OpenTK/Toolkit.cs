@@ -28,10 +28,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CustomOpenTK.Platform;
+using OpenTK.Platform;
 using System.Diagnostics;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Provides static methods to manage an OpenTK application.
@@ -68,7 +68,7 @@ namespace CustomOpenTK
         /// <code>
         /// static void Main()
         /// {
-        ///     using (CustomOpenTK.Toolkit.Init())
+        ///     using (OpenTK.Toolkit.Init())
         ///     {
         ///      ...
         ///     }
@@ -77,14 +77,14 @@ namespace CustomOpenTK
         /// </para>
         /// <para>
         /// The reason is that some toolkits do not configure the underlying platform
-        /// correctly or configure it in a way that is incompatible with CustomOpenTK.
+        /// correctly or configure it in a way that is incompatible with OpenTK.
         /// Calling this method first ensures that OpenTK is given the chance to
         /// initialize itself and configure the platform correctly.
         /// </para>
         /// </remarks>
         /// <returns>
         /// An IDisposable instance that you can use to dispose of the resources
-        /// consumed by CustomOpenTK.
+        /// consumed by OpenTK.
         /// </returns>
         public static Toolkit Init()
         {
@@ -93,7 +93,7 @@ namespace CustomOpenTK
 
         /// <summary>
         /// Initializes OpenTK with the specified options. Use this method
-        /// to influence the CustomOpenTK.Platform implementation that will be used.
+        /// to influence the OpenTK.Platform implementation that will be used.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -103,7 +103,7 @@ namespace CustomOpenTK
         /// <code>
         /// static void Main()
         /// {
-        ///     using (CustomOpenTK.Toolkit.Init())
+        ///     using (OpenTK.Toolkit.Init())
         ///     {
         ///      ...
         ///     }
@@ -112,7 +112,7 @@ namespace CustomOpenTK
         /// </para>
         /// <para>
         /// The reason is that some toolkits do not configure the underlying platform
-        /// correctly or configure it in a way that is incompatible with CustomOpenTK.
+        /// correctly or configure it in a way that is incompatible with OpenTK.
         /// Calling this method first ensures that OpenTK is given the chance to
         /// initialize itself and configure the platform correctly.
         /// </para>
@@ -121,7 +121,7 @@ namespace CustomOpenTK
         /// containing the desired options.</param>
         /// <returns>
         /// An IDisposable instance that you can use to dispose of the resources
-        /// consumed by CustomOpenTK.
+        /// consumed by OpenTK.
         /// </returns>
         public static Toolkit Init(ToolkitOptions options)
         {

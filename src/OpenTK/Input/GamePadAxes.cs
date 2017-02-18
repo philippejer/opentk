@@ -25,7 +25,7 @@
 // THE SOFTWARE.
 using System;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     [Flags]
     internal enum GamePadAxes : byte

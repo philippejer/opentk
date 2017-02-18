@@ -32,7 +32,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     #pragma warning disable 0169
     

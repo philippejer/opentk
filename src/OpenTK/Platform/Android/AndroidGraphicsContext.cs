@@ -14,10 +14,10 @@ using Android.Views;
 using Android.Runtime;
 using Javax.Microedition.Khronos.Egl;
 
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Platform.Egl;
+using OpenTK.Graphics;
+using OpenTK.Platform.Egl;
 
-namespace CustomOpenTK.Platform.Android {
+namespace OpenTK.Platform.Android {
 
     class AndroidGraphicsContext : EglContext
     {

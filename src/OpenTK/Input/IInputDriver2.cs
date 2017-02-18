@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     // Defines the interface for a 2nd generation input driver.
     interface IInputDriver2 : IDisposable

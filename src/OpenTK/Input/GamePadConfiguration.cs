@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     sealed class GamePadConfiguration
     {

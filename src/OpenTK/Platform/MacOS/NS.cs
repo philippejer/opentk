@@ -31,7 +31,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     [Flags]
     enum AddImageFlags

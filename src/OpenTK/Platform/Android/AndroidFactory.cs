@@ -8,9 +8,9 @@
 #endregion
 
 using System;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.Android
+namespace OpenTK.Platform.Android
 {
     sealed class AndroidFactory : PlatformFactoryBase
     {
@@ -46,17 +46,17 @@ namespace CustomOpenTK.Platform.Android
             return new AndroidDisplayDeviceDriver();
         }
 
-        public override CustomOpenTK.Input.IKeyboardDriver2 CreateKeyboardDriver()
+        public override OpenTK.Input.IKeyboardDriver2 CreateKeyboardDriver()
         {
             throw new NotImplementedException();
         }
 
-        public override CustomOpenTK.Input.IMouseDriver2 CreateMouseDriver()
+        public override OpenTK.Input.IMouseDriver2 CreateMouseDriver()
         {
             throw new NotImplementedException();
         }
 
-        public override CustomOpenTK.Input.IJoystickDriver2 CreateJoystickDriver()
+        public override OpenTK.Input.IJoystickDriver2 CreateJoystickDriver()
         {
             throw new NotImplementedException();
         }

@@ -28,7 +28,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Compute
+namespace OpenTK.Compute
 {
 
 }

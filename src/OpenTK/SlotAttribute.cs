@@ -27,7 +27,7 @@
 
 using System;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
 	/// <summary>
 	/// Defines the slot index for a wrapper function.

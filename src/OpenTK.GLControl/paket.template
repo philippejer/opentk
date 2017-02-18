@@ -1,5 +1,5 @@
 type project
-id CustomOpenTK.GLControl
+id OpenTK.GLControl
 owners
     opentk thefiddler
 authors 

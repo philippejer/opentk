@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-namespace CustomOpenTK.Graphics
+namespace OpenTK.Graphics
 {
     /// <summary>Defines the format for graphics operations.</summary>
     public class GraphicsMode : IEquatable<GraphicsMode>
@@ -180,7 +180,7 @@ namespace CustomOpenTK.Graphics
         #region public int ColorFormat
 
         /// <summary>
-        /// Gets an CustomOpenTK.Graphics.ColorFormat that describes the color format for this GraphicsFormat.
+        /// Gets an OpenTK.Graphics.ColorFormat that describes the color format for this GraphicsFormat.
         /// </summary>
         public ColorFormat ColorFormat
         {
@@ -196,7 +196,7 @@ namespace CustomOpenTK.Graphics
         #region public int AccumulatorFormat
 
         /// <summary>
-        /// Gets an CustomOpenTK.Graphics.ColorFormat that describes the accumulator format for this GraphicsFormat.
+        /// Gets an OpenTK.Graphics.ColorFormat that describes the accumulator format for this GraphicsFormat.
         /// </summary>
         public ColorFormat AccumulatorFormat
         {
@@ -301,7 +301,7 @@ namespace CustomOpenTK.Graphics
 
         #region public static GraphicsFormat Default
 
-        /// <summary>Returns an CustomOpenTK.GraphicsFormat compatible with the underlying platform.</summary>
+        /// <summary>Returns an OpenTK.GraphicsFormat compatible with the underlying platform.</summary>
         public static GraphicsMode Default
         {
             get

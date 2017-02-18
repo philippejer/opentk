@@ -36,7 +36,7 @@ using System.Drawing;
 using System.Text;
 
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Represents a mouse device and provides methods to query its status.
@@ -89,34 +89,34 @@ namespace CustomOpenTK.Input
         #region --- Public Members ---
 
         /// <summary>
-        /// Retrieves the combined hardware <see cref="CustomOpenTK.Input.MouseState"/> for all specified mouse devices.
-        /// This method is equivalent to <see cref="CustomOpenTK.Input.Mouse.GetState()"/>.
+        /// Retrieves the combined hardware <see cref="OpenTK.Input.MouseState"/> for all specified mouse devices.
+        /// This method is equivalent to <see cref="OpenTK.Input.Mouse.GetState()"/>.
         /// </summary>
-        /// <returns>A <see cref="CustomOpenTK.Input.MouseState"/> structure representing the state for the specified mouse device.</returns>
-        /// <seealso cref="CustomOpenTK.Input.Mouse.GetState()"/>
+        /// <returns>A <see cref="OpenTK.Input.MouseState"/> structure representing the state for the specified mouse device.</returns>
+        /// <seealso cref="OpenTK.Input.Mouse.GetState()"/>
         public MouseState GetState()
         {
             return Mouse.GetState();
         }
 
         /// <summary>
-        /// Retrieves the hardware <see cref="CustomOpenTK.Input.MouseState"/> for the specified mouse device.
-        /// This method is equivalent to <see cref="CustomOpenTK.Input.Mouse.GetState(int)"/>.
+        /// Retrieves the hardware <see cref="OpenTK.Input.MouseState"/> for the specified mouse device.
+        /// This method is equivalent to <see cref="OpenTK.Input.Mouse.GetState(int)"/>.
         /// </summary>
         /// <param name="index">The index of the mouse device.</param>
-        /// <returns>A <see cref="CustomOpenTK.Input.MouseState"/> structure representing the state for the specified mouse device.</returns>
-        /// <seealso cref="CustomOpenTK.Input.Mouse.GetState(int)"/>
+        /// <returns>A <see cref="OpenTK.Input.MouseState"/> structure representing the state for the specified mouse device.</returns>
+        /// <seealso cref="OpenTK.Input.Mouse.GetState(int)"/>
         public MouseState GetState(int index)
         {
             return Mouse.GetState(index);
         }
 
         /// <summary>
-        /// Retreves the <see cref="CustomOpenTK.Input.MouseState"/> for the mouse cursor.
-        /// This method is equivalent to <see cref="CustomOpenTK.Input.Mouse.GetCursorState"/>.
+        /// Retreves the <see cref="OpenTK.Input.MouseState"/> for the mouse cursor.
+        /// This method is equivalent to <see cref="OpenTK.Input.Mouse.GetCursorState"/>.
         /// </summary>
-        /// <returns>A <see cref="CustomOpenTK.Input.MouseState"/> structure representing the state of the mouse cursor.</returns>
-        /// <seealso cref="CustomOpenTK.Input.Mouse.GetCursorState()"/>
+        /// <returns>A <see cref="OpenTK.Input.MouseState"/> structure representing the state of the mouse cursor.</returns>
+        /// <seealso cref="OpenTK.Input.Mouse.GetCursorState()"/>
         public MouseState GetCursorState()
         {
             return Mouse.GetCursorState();
@@ -313,7 +313,7 @@ namespace CustomOpenTK.Input
         /// <summary>
         /// Gets an integer representing the relative wheel movement.
         /// </summary>
-        [Obsolete("WheelDelta is only defined for a single WheelChanged event.  Use the CustomOpenTK.Input.MouseWheelEventArgs::Delta property with the CustomOpenTK.Input.MouseDevice::WheelChanged event.", false)]
+        [Obsolete("WheelDelta is only defined for a single WheelChanged event.  Use the OpenTK.Input.MouseWheelEventArgs::Delta property with the OpenTK.Input.MouseDevice::WheelChanged event.", false)]
         public int WheelDelta
         {
             get
@@ -331,7 +331,7 @@ namespace CustomOpenTK.Input
         /// <summary>
         /// Gets an integer representing the relative x movement of the pointer, in pixel coordinates.
         /// </summary>
-        [Obsolete("XDelta is only defined for a single Move event.  Use the CustomOpenTK.Input.MouseMoveEventArgs::Delta property with the CustomOpenTK.Input.MouseDevice::Move event.", false)]
+        [Obsolete("XDelta is only defined for a single Move event.  Use the OpenTK.Input.MouseMoveEventArgs::Delta property with the OpenTK.Input.MouseDevice::Move event.", false)]
         public int XDelta
         {
             get
@@ -349,7 +349,7 @@ namespace CustomOpenTK.Input
         /// <summary>
         /// Gets an integer representing the relative y movement of the pointer, in pixel coordinates.
         /// </summary>
-        [Obsolete("YDelta is only defined for a single Move event.  Use the CustomOpenTK.Input.MouseMoveEventArgs::Delta property with the CustomOpenTK.Input.MouseDevice::Move event.", false)]
+        [Obsolete("YDelta is only defined for a single Move event.  Use the OpenTK.Input.MouseMoveEventArgs::Delta property with the OpenTK.Input.MouseDevice::Move event.", false)]
         public int YDelta
         {
             get

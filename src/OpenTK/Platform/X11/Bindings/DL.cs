@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     class DL
     {

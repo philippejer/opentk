@@ -1,4 +1,4 @@
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
 #pragma warning disable 3019
 #pragma warning disable 1591

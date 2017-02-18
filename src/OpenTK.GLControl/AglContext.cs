@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     using Carbon;
     using Graphics;

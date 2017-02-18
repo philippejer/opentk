@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Platform
+namespace OpenTK.Platform
 {
     internal interface IDisplayDeviceDriver
     {

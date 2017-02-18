@@ -29,7 +29,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     using CGLPixelFormat = IntPtr;
     using CGLContext = IntPtr;

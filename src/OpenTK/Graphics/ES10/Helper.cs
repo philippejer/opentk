@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Graphics.ES10
+namespace OpenTK.Graphics.ES10
 {
     /// <summary>
     /// Provides access to OpenGL ES 1.0 methods.

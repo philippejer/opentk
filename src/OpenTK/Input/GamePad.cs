@@ -29,7 +29,7 @@
 
 using System;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Provides access to GamePad devices.

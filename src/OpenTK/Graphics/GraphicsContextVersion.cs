@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Graphics
+namespace OpenTK.Graphics
 {
     /// <summary>
     /// Defines the version information of a GraphicsContext.

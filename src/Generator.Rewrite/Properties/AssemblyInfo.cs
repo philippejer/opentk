@@ -3,7 +3,7 @@ using System;
 using System.Reflection;
 
 [assembly: AssemblyTitleAttribute("Generator.Rewrite")]
-[assembly: AssemblyProductAttribute("CustomOpenTK")]
+[assembly: AssemblyProductAttribute("OpenTK")]
 [assembly: AssemblyDescriptionAttribute("A set of fast, low-level C# bindings for OpenGL, OpenGL ES and OpenAL.")]
 [assembly: AssemblyVersionAttribute("2.0.0")]
 [assembly: AssemblyFileVersionAttribute("2.0.0")]

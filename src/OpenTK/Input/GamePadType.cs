@@ -27,7 +27,7 @@
 //
 #endregion
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Enumerates available <see cref="GamePad"/> types.

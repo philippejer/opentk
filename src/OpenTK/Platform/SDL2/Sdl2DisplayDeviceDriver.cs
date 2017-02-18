@@ -32,7 +32,7 @@ using System.Diagnostics;
 using System.Drawing;
 #endif
 
-namespace CustomOpenTK.Platform.SDL2
+namespace OpenTK.Platform.SDL2
 {
     class Sdl2DisplayDeviceDriver : DisplayDeviceBase
     {

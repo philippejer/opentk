@@ -30,15 +30,15 @@ using System.ComponentModel;
 #if !MINIMAL
 using System.Drawing;
 #endif
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Input;
-using CustomOpenTK.Platform;
+using OpenTK.Graphics;
+using OpenTK.Input;
+using OpenTK.Platform;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
 
     /// <summary>
-    /// Instances of this class implement the <see cref="CustomOpenTK.INativeWindow"/> interface on the current platform.
+    /// Instances of this class implement the <see cref="OpenTK.INativeWindow"/> interface on the current platform.
     /// </summary>
     public class NativeWindow : INativeWindow
     {
@@ -55,7 +55,7 @@ namespace CustomOpenTK
         private bool previous_cursor_visible = true;
 
         /// <summary>
-        /// System.Threading.Thread.CurrentThread.ManagedThreadId of the thread that created this <see cref="CustomOpenTK.NativeWindow"/>.
+        /// System.Threading.Thread.CurrentThread.ManagedThreadId of the thread that created this <see cref="OpenTK.NativeWindow"/>.
         /// </summary>
         private int thread_id;
         #endregion
@@ -64,7 +64,7 @@ namespace CustomOpenTK
 
         /// <summary>Constructs a new NativeWindow with default attributes without enabling events.</summary>
         public NativeWindow()
-            : this(640, 480, "CustomOpenTK Native Window", GameWindowFlags.Default, GraphicsMode.Default, DisplayDevice.Default) { }
+            : this(640, 480, "OpenTK Native Window", GameWindowFlags.Default, GraphicsMode.Default, DisplayDevice.Default) { }
 
         // TODO: Remaining constructors.
 
@@ -73,8 +73,8 @@ namespace CustomOpenTK
         /// <param name="height">The height of the NativeWindow in pixels.</param>
         /// <param name="title">The title of the NativeWindow.</param>
         /// <param name="options">GameWindow options specifying window appearance and behavior.</param>
-        /// <param name="mode">The CustomOpenTK.Graphics.GraphicsMode of the NativeWindow.</param>
-        /// <param name="device">The CustomOpenTK.Graphics.DisplayDevice to construct the NativeWindow in.</param>
+        /// <param name="mode">The OpenTK.Graphics.GraphicsMode of the NativeWindow.</param>
+        /// <param name="device">The OpenTK.Graphics.DisplayDevice to construct the NativeWindow in.</param>
         /// <exception cref="System.ArgumentOutOfRangeException">If width or height is less than 1.</exception>
         /// <exception cref="System.ArgumentNullException">If mode or device is null.</exception>
         public NativeWindow(int width, int height, string title, GameWindowFlags options, GraphicsMode mode, DisplayDevice device)
@@ -89,8 +89,8 @@ namespace CustomOpenTK
         /// <param name="height">The height of the NativeWindow in pixels.</param>
         /// <param name="title">The title of the NativeWindow.</param>
         /// <param name="options">GameWindow options specifying window appearance and behavior.</param>
-        /// <param name="mode">The CustomOpenTK.Graphics.GraphicsMode of the NativeWindow.</param>
-        /// <param name="device">The CustomOpenTK.Graphics.DisplayDevice to construct the NativeWindow in.</param>
+        /// <param name="mode">The OpenTK.Graphics.GraphicsMode of the NativeWindow.</param>
+        /// <param name="device">The OpenTK.Graphics.DisplayDevice to construct the NativeWindow in.</param>
         /// <exception cref="System.ArgumentOutOfRangeException">If width or height is less than 1.</exception>
         /// <exception cref="System.ArgumentNullException">If mode or device is null.</exception>
         public NativeWindow(int x, int y, int width, int height, string title, GameWindowFlags options, GraphicsMode mode, DisplayDevice device)
@@ -271,7 +271,7 @@ namespace CustomOpenTK
         #region Cursor
 
         /// <summary>
-        /// Gets or sets the <see cref="CustomOpenTK.MouseCursor"/> for this window.
+        /// Gets or sets the <see cref="OpenTK.MouseCursor"/> for this window.
         /// </summary>
         public MouseCursor Cursor
         {
@@ -512,7 +512,7 @@ namespace CustomOpenTK
         #region WindowInfo
 
         /// <summary>
-        /// Gets the <see cref="CustomOpenTK.Platform.IWindowInfo"/> of this window.
+        /// Gets the <see cref="OpenTK.Platform.IWindowInfo"/> of this window.
         /// </summary>
         public IWindowInfo WindowInfo
         {
@@ -637,7 +637,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Occurs whenever a keybord key is pressed.
         /// </summary>
-        public event EventHandler<CustomOpenTK.Input.KeyboardKeyEventArgs> KeyDown = delegate { };
+        public event EventHandler<OpenTK.Input.KeyboardKeyEventArgs> KeyDown = delegate { };
 
         /// <summary>
         /// Occurs whenever a character is typed.
@@ -647,7 +647,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Occurs whenever a keyboard key is released.
         /// </summary>
-        public event EventHandler<CustomOpenTK.Input.KeyboardKeyEventArgs> KeyUp = delegate { };
+        public event EventHandler<OpenTK.Input.KeyboardKeyEventArgs> KeyUp = delegate { };
 
         /// <summary>
         /// Occurs whenever the window is moved.
@@ -819,7 +819,7 @@ namespace CustomOpenTK
         #region OnFocusedChanged
 
         /// <summary>
-        /// Called when the <see cref="CustomOpenTK.INativeWindow.Focused"/> property of the NativeWindow has changed.
+        /// Called when the <see cref="OpenTK.INativeWindow.Focused"/> property of the NativeWindow has changed.
         /// </summary>
         /// <param name="e">Not used.</param>
         protected virtual void OnFocusedChanged(EventArgs e)
@@ -846,7 +846,7 @@ namespace CustomOpenTK
         #region OnIconChanged
 
         /// <summary>
-        /// Called when the <see cref="CustomOpenTK.INativeWindow.Icon"/> property of the NativeWindow has changed.
+        /// Called when the <see cref="OpenTK.INativeWindow.Icon"/> property of the NativeWindow has changed.
         /// </summary>
         /// <param name="e">Not used.</param>
         protected virtual void OnIconChanged(EventArgs e)
@@ -873,7 +873,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Called when a character is typed.
         /// </summary>
-        /// <param name="e">The <see cref="CustomOpenTK.KeyPressEventArgs"/> for this event.</param>
+        /// <param name="e">The <see cref="OpenTK.KeyPressEventArgs"/> for this event.</param>
         protected virtual void OnKeyPress(KeyPressEventArgs e)
         {
             KeyPress(this, e);
@@ -886,7 +886,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Called when a keybord key is released.
         /// </summary>
-        /// <param name="e">The <see cref="CustomOpenTK.Input.KeyboardKeyEventArgs"/> for this event.</param>
+        /// <param name="e">The <see cref="OpenTK.Input.KeyboardKeyEventArgs"/> for this event.</param>
         protected virtual void OnKeyUp(KeyboardKeyEventArgs e)
         {
             KeyUp(this, e);
@@ -997,7 +997,7 @@ namespace CustomOpenTK
         #region OnTitleChanged
 
         /// <summary>
-        /// Called when the <see cref="CustomOpenTK.INativeWindow.Title"/> property of the NativeWindow has changed.
+        /// Called when the <see cref="OpenTK.INativeWindow.Title"/> property of the NativeWindow has changed.
         /// </summary>
         /// <param name="e">Not used.</param>
         protected virtual void OnTitleChanged(EventArgs e)
@@ -1010,7 +1010,7 @@ namespace CustomOpenTK
         #region OnVisibleChanged
 
         /// <summary>
-        /// Called when the <see cref="CustomOpenTK.INativeWindow.Visible"/> property of the NativeWindow has changed.
+        /// Called when the <see cref="OpenTK.INativeWindow.Visible"/> property of the NativeWindow has changed.
         /// </summary>
         /// <param name="e">Not used.</param>
         protected virtual void OnVisibleChanged(EventArgs e)

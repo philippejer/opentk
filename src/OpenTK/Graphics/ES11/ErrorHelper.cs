@@ -30,7 +30,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-namespace CustomOpenTK.Graphics.ES11
+namespace OpenTK.Graphics.ES11
 {
     // Used in debug-mode only, for automatic OpenGL error-checking.
     //

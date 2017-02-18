@@ -29,7 +29,7 @@
 
 using System;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     [Flags]
     enum NSEventModifierMask : uint

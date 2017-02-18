@@ -29,9 +29,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     // Constructs GLControls.
     class GLControlFactory

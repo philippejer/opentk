@@ -1,4 +1,4 @@
-﻿#region --- CustomOpenTK.OpenAL License ---
+﻿#region --- OpenTK.OpenAL License ---
 /* AlTokens.cs
  * C header: \OpenAL 1.1 SDK\include\Al.h
  * Spec: http://www.openal.org/openal_webstf/specs/OpenAL11Specification.pdf
@@ -9,7 +9,7 @@
 
 using System;
 
-namespace CustomOpenTK.Audio.OpenAL
+namespace OpenTK.Audio.OpenAL
 {
 
     ///<summary>A list of valid Enable/Disable/IsEnabled parameters</summary>

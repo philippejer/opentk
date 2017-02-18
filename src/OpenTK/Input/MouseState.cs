@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Encapsulates the state of a mouse device.
@@ -50,9 +50,9 @@ namespace CustomOpenTK.Input
 
         /// <summary>
         /// Gets a <see cref="System.Boolean"/> indicating whether the specified
-        /// <see cref="CustomOpenTK.Input.MouseButton"/> is pressed.
+        /// <see cref="OpenTK.Input.MouseButton"/> is pressed.
         /// </summary>
-        /// <param name="button">The <see cref="CustomOpenTK.Input.MouseButton"/> to check.</param>
+        /// <param name="button">The <see cref="OpenTK.Input.MouseButton"/> to check.</param>
         /// <returns>True if key is pressed; false otherwise.</returns>
         public bool this[MouseButton button]
         {
@@ -69,7 +69,7 @@ namespace CustomOpenTK.Input
         /// <summary>
         /// Gets a <see cref="System.Boolean"/> indicating whether this button is down.
         /// </summary>
-        /// <param name="button">The <see cref="CustomOpenTK.Input.MouseButton"/> to check.</param>
+        /// <param name="button">The <see cref="OpenTK.Input.MouseButton"/> to check.</param>
         public bool IsButtonDown(MouseButton button)
         {
             return ReadBit((int)button);
@@ -78,7 +78,7 @@ namespace CustomOpenTK.Input
         /// <summary>
         /// Gets a <see cref="System.Boolean"/> indicating whether this button is up.
         /// </summary>
-        /// <param name="button">The <see cref="CustomOpenTK.Input.MouseButton"/> to check.</param>
+        /// <param name="button">The <see cref="OpenTK.Input.MouseButton"/> to check.</param>
         public bool IsButtonUp(MouseButton button)
         {
             return !ReadBit((int)button);
@@ -102,7 +102,7 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Gets a <see cref="CustomOpenTK.Input.MouseScroll"/> instance,
+        /// Gets a <see cref="OpenTK.Input.MouseScroll"/> instance,
         /// representing the current state of the mouse scroll wheel.
         /// </summary>
         public MouseScroll Scroll
@@ -272,9 +272,9 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String"/> that represents the current <see cref="CustomOpenTK.Input.MouseState"/>.
+        /// Returns a <see cref="System.String"/> that represents the current <see cref="OpenTK.Input.MouseState"/>.
         /// </summary>
-        /// <returns>A <see cref="System.String"/> that represents the current <see cref="CustomOpenTK.Input.MouseState"/>.</returns>
+        /// <returns>A <see cref="System.String"/> that represents the current <see cref="OpenTK.Input.MouseState"/>.</returns>
         public override string ToString()
         {
             string b = Convert.ToString(buttons, 2).PadLeft(10, '0');

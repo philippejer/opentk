@@ -34,11 +34,11 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-using CustomOpenTK.Platform;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Graphics.OpenGL;
+using OpenTK.Platform;
+using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// OpenGL-aware WinForms control.
@@ -76,7 +76,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Constructs a new instance with the specified GraphicsMode.
         /// </summary>
-        /// <param name="mode">The CustomOpenTK.Graphics.GraphicsMode of the control.</param>
+        /// <param name="mode">The OpenTK.Graphics.GraphicsMode of the control.</param>
         public GLControl(GraphicsMode mode)
             : this(mode, 1, 0, GraphicsContextFlags.Default)
         { }
@@ -84,7 +84,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Constructs a new instance with the specified GraphicsMode.
         /// </summary>
-        /// <param name="mode">The CustomOpenTK.Graphics.GraphicsMode of the control.</param>
+        /// <param name="mode">The OpenTK.Graphics.GraphicsMode of the control.</param>
         /// <param name="major">The major version for the OpenGL GraphicsContext.</param>
         /// <param name="minor">The minor version for the OpenGL GraphicsContext.</param>
         /// <param name="flags">The GraphicsContextFlags for the OpenGL GraphicsContext.</param>
@@ -474,7 +474,7 @@ namespace CustomOpenTK
         #region WindowInfo
 
         /// <summary>
-        /// Gets the <see cref="CustomOpenTK.Platform.IWindowInfo"/> for this instance.
+        /// Gets the <see cref="OpenTK.Platform.IWindowInfo"/> for this instance.
         /// </summary>
         public IWindowInfo WindowInfo
         {
@@ -493,8 +493,8 @@ namespace CustomOpenTK
         /// <seealso cref="MakeCurrent"/>
         /// </summary>
         /// <returns>A System.Drawing.Bitmap, containing the contents of the frontbuffer.</returns>
-        /// <exception cref="CustomOpenTK.Graphics.GraphicsContextException">
-        /// Occurs when no CustomOpenTK.Graphics.GraphicsContext is current in the calling thread.
+        /// <exception cref="OpenTK.Graphics.GraphicsContextException">
+        /// Occurs when no OpenTK.Graphics.GraphicsContext is current in the calling thread.
         /// </exception>
         [Obsolete("This method will not work correctly with OpenGL|ES. Please use GL.ReadPixels to capture the contents of the framebuffer (refer to http://www.opentk.com/doc/graphics/save-opengl-rendering-to-disk for more information).")]
         public Bitmap GrabScreenshot()

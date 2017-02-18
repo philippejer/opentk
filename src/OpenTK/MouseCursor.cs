@@ -29,7 +29,7 @@
 
 using System;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Represents a predefined or custom mouse cursor.

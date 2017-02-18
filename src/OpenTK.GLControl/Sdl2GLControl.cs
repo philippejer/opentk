@@ -30,10 +30,10 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Platform;
+using OpenTK.Graphics;
+using OpenTK.Platform;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     class Sdl2GLControl : IGLControl
     {

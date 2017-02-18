@@ -28,9 +28,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     // Standard keyboard driver that relies on xlib input events.
     // Only one keyboard supported.

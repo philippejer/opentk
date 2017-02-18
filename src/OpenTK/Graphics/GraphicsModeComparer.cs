@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Graphics
+namespace OpenTK.Graphics
 {
     sealed class GraphicsModeComparer : IComparer<GraphicsMode>
     {

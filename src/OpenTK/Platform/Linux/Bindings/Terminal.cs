@@ -30,7 +30,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.Linux
+namespace OpenTK.Platform.Linux
 {
     class Terminal
     {

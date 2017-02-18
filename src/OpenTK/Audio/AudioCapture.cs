@@ -30,9 +30,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-using CustomOpenTK.Audio.OpenAL;
+using OpenTK.Audio.OpenAL;
 
-namespace CustomOpenTK.Audio
+namespace OpenTK.Audio
 {
 
     /// <summary>
@@ -279,7 +279,7 @@ namespace CustomOpenTK.Audio
         #region SampleFormat & SampleFrequency
 
         /// <summary>
-        /// Gets the CustomOpenTK.Audio.ALFormat for this instance.
+        /// Gets the OpenTK.Audio.ALFormat for this instance.
         /// </summary>
         public ALFormat SampleFormat
         {

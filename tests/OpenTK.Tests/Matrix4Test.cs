@@ -1,8 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
-using CustomOpenTK;
+using OpenTK;
 
-namespace CustomOpenTK.Tests
+namespace OpenTK.Tests
 {
     [TestFixture]
     public class Matrix4Test

@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Platform
+namespace OpenTK.Platform
 {
     /// <summary>Describes an OS window.</summary>
     public interface IWindowInfo : IDisposable

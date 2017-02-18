@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Represents a Quaternion.
@@ -109,7 +109,7 @@ namespace CustomOpenTK
         #pragma warning disable 3005 // Identifier differing only in case is not CLS-compliant, compiler bug in Mono 3.4.0
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3 with the X, Y and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3 with the X, Y and Z components of this instance.
         /// </summary>
         [Obsolete("Use Xyz property instead.")]
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -118,7 +118,7 @@ namespace CustomOpenTK
         public Vector3 XYZ { get { return Xyz; } set { Xyz = value; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3 with the X, Y and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3 with the X, Y and Z components of this instance.
         /// </summary>
         [CLSCompliant(false)]
         public Vector3 Xyz { get { return xyz; } set { xyz = value; } }

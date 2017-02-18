@@ -27,10 +27,10 @@
 
 using System;
 using System.Diagnostics;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Input;
+using OpenTK.Graphics;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     class X11Factory : PlatformFactoryBase
     {

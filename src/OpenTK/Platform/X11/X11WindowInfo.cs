@@ -30,7 +30,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     /// \internal
     /// <summary>Describes an X11 window.</summary>

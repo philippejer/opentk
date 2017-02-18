@@ -8,7 +8,7 @@
 
 using System;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Defines a plaftorm-specific exception.
@@ -16,14 +16,14 @@ namespace CustomOpenTK
     public class PlatformException : Exception
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomOpenTK.PlatformException"/> class.
+        /// Initializes a new instance of the <see cref="OpenTK.PlatformException"/> class.
         /// </summary>
         public PlatformException()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomOpenTK.PlatformException"/> class.
+        /// Initializes a new instance of the <see cref="OpenTK.PlatformException"/> class.
         /// </summary>
         /// <param name="message">A message explaining the cause for this exception.</param>
         public PlatformException(string message) : base(message) { }

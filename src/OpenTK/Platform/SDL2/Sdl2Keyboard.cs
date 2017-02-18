@@ -27,9 +27,9 @@
 
 using System;
 using System.Collections.Generic;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.SDL2
+namespace OpenTK.Platform.SDL2
 {
     class Sdl2Keyboard : IKeyboardDriver2
     {

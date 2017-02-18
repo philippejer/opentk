@@ -32,9 +32,9 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
-using CustomOpenTK.Platform.Common;
+using OpenTK.Platform.Common;
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     class HidProtocol
     {

@@ -29,9 +29,9 @@
 
 using System;
 using System.Diagnostics;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     class XI2Input : IInputDriver2
     {

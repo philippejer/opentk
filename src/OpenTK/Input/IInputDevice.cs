@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Defines a common interface for all input devices.
@@ -21,7 +21,7 @@ namespace CustomOpenTK.Input
         string Description { get; }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Input.InputDeviceType value, representing the device type of this IInputDevice instance.
+        /// Gets an OpenTK.Input.InputDeviceType value, representing the device type of this IInputDevice instance.
         /// </summary>
         InputDeviceType DeviceType { get; }
     }

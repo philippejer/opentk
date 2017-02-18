@@ -6,7 +6,7 @@
 
 using System;
 using System.Runtime.InteropServices;
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Defines a 2d box (rectangle).
@@ -38,8 +38,8 @@ namespace CustomOpenTK
         /// <summary>
         /// Constructs a new Box2d with the specified dimensions.
         /// </summary>
-        /// <param name="topLeft">An CustomOpenTK.Vector2d describing the top-left corner of the Box2d.</param>
-        /// <param name="bottomRight">An CustomOpenTK.Vector2d describing the bottom-right corner of the Box2d.</param>
+        /// <param name="topLeft">An OpenTK.Vector2d describing the top-left corner of the Box2d.</param>
+        /// <param name="bottomRight">An OpenTK.Vector2d describing the bottom-right corner of the Box2d.</param>
         public Box2d(Vector2d topLeft, Vector2d bottomRight)
         {
             Left = topLeft.X;
@@ -70,7 +70,7 @@ namespace CustomOpenTK
         /// <param name="left">The position of the left boundary.</param>
         /// <param name="right">The position of the right boundary.</param>
         /// <param name="bottom">The position of the bottom boundary.</param>
-        /// <returns>A new CustomOpenTK.Box2d with the specfied dimensions.</returns>
+        /// <returns>A new OpenTK.Box2d with the specfied dimensions.</returns>
         public static Box2d FromTLRB(double top, double left, double right, double bottom)
         {
             return new Box2d(left, top, right, bottom);
@@ -83,7 +83,7 @@ namespace CustomOpenTK
         /// <param name="left">The position of the left boundary.</param>
         /// <param name="width">The width of the box.</param>
         /// <param name="height">The height of the box.</param>
-        /// <returns>A new CustomOpenTK.Box2d with the specfied dimensions.</returns>
+        /// <returns>A new OpenTK.Box2d with the specfied dimensions.</returns>
         public static Box2d FromDimensions(double left, double top, double width, double height)
         {
             return new Box2d(left, top, left + width, top + height);
@@ -94,7 +94,7 @@ namespace CustomOpenTK
         /// </summary>
         /// <param name="position">The position of the top left corner.</param>
         /// <param name="size">The size of the box.</param>
-        /// <returns>A new CustomOpenTK.Box2d with the specfied dimensions.</returns>
+        /// <returns>A new OpenTK.Box2d with the specfied dimensions.</returns>
         public static Box2d FromDimensions(Vector2d position, Vector2d size)
         {
             return FromDimensions(position.X, position.Y, size.X, size.Y);

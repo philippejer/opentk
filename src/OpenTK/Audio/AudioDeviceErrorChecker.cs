@@ -29,9 +29,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using CustomOpenTK.Audio.OpenAL;
+using OpenTK.Audio.OpenAL;
 
-namespace CustomOpenTK.Audio
+namespace OpenTK.Audio
 {
     struct AudioDeviceErrorChecker : IDisposable
     {

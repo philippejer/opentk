@@ -29,7 +29,7 @@
 
 using System;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Describes the <see cref="ButtonState"/> of <see cref="GamePad"/> <see cref="Buttons"/>.
@@ -39,7 +39,7 @@ namespace CustomOpenTK.Input
         Buttons buttons;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomOpenTK.Input.GamePadButtons"/> structure.
+        /// Initializes a new instance of the <see cref="OpenTK.Input.GamePadButtons"/> structure.
         /// </summary>
         /// <param name="state">A bitmask containing the button state.</param>
         public GamePadButtons(Buttons state)
@@ -168,9 +168,9 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String"/> that represents the current <see cref="CustomOpenTK.Input.GamePadButtons"/>.
+        /// Returns a <see cref="System.String"/> that represents the current <see cref="OpenTK.Input.GamePadButtons"/>.
         /// </summary>
-        /// <returns>A <see cref="System.String"/> that represents the current <see cref="CustomOpenTK.Input.GamePadButtons"/>.</returns>
+        /// <returns>A <see cref="System.String"/> that represents the current <see cref="OpenTK.Input.GamePadButtons"/>.</returns>
         public override string ToString()
         {
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
@@ -203,7 +203,7 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Serves as a hash function for a <see cref="CustomOpenTK.Input.GamePadButtons"/> object.
+        /// Serves as a hash function for a <see cref="OpenTK.Input.GamePadButtons"/> object.
         /// </summary>
         /// <returns>A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a
         /// hash table.</returns>
@@ -213,11 +213,11 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="CustomOpenTK.Input.GamePadButtons"/>.
+        /// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="OpenTK.Input.GamePadButtons"/>.
         /// </summary>
-        /// <param name="obj">The <see cref="System.Object"/> to compare with the current <see cref="CustomOpenTK.Input.GamePadButtons"/>.</param>
+        /// <param name="obj">The <see cref="System.Object"/> to compare with the current <see cref="OpenTK.Input.GamePadButtons"/>.</param>
         /// <returns><c>true</c> if the specified <see cref="System.Object"/> is equal to the current
-        /// <see cref="CustomOpenTK.Input.GamePadButtons"/>; otherwise, <c>false</c>.</returns>
+        /// <see cref="OpenTK.Input.GamePadButtons"/>; otherwise, <c>false</c>.</returns>
         public override bool Equals(object obj)
         {
             return
@@ -230,11 +230,11 @@ namespace CustomOpenTK.Input
         #region IEquatable<GamePadButtons> Members
 
         /// <summary>
-        /// Determines whether the specified <see cref="CustomOpenTK.Input.GamePadButtons"/> is equal to the current <see cref="CustomOpenTK.Input.GamePadButtons"/>.
+        /// Determines whether the specified <see cref="OpenTK.Input.GamePadButtons"/> is equal to the current <see cref="OpenTK.Input.GamePadButtons"/>.
         /// </summary>
-        /// <param name="other">The <see cref="CustomOpenTK.Input.GamePadButtons"/> to compare with the current <see cref="CustomOpenTK.Input.GamePadButtons"/>.</param>
-        /// <returns><c>true</c> if the specified <see cref="CustomOpenTK.Input.GamePadButtons"/> is equal to the current
-        /// <see cref="CustomOpenTK.Input.GamePadButtons"/>; otherwise, <c>false</c>.</returns>
+        /// <param name="other">The <see cref="OpenTK.Input.GamePadButtons"/> to compare with the current <see cref="OpenTK.Input.GamePadButtons"/>.</param>
+        /// <returns><c>true</c> if the specified <see cref="OpenTK.Input.GamePadButtons"/> is equal to the current
+        /// <see cref="OpenTK.Input.GamePadButtons"/>; otherwise, <c>false</c>.</returns>
         public bool Equals(GamePadButtons other)
         {
             return buttons == other.buttons;

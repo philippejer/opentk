@@ -32,7 +32,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 
-namespace CustomOpenTK.Compute.CL10
+namespace OpenTK.Compute.CL10
 {
     /// <summary>
     /// Provides access to the OpenCL 1.0 flat API.
@@ -97,12 +97,12 @@ namespace CustomOpenTK.Compute.CL10
         
         #region Helper Overrides
         
-        public static unsafe IntPtr CreateContext(ContextProperties* properties, uint num_devices, IntPtr* devices, IntPtr pfn_notify, IntPtr user_data, CustomOpenTK.Compute.CL10.ErrorCode* errcode_ret)
+        public static unsafe IntPtr CreateContext(ContextProperties* properties, uint num_devices, IntPtr* devices, IntPtr pfn_notify, IntPtr user_data, OpenTK.Compute.CL10.ErrorCode* errcode_ret)
         {
             return CreateContext((IntPtr*)properties, num_devices, devices, pfn_notify, user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContext(ContextProperties[] properties, uint num_devices, IntPtr[] devices, IntPtr pfn_notify, IntPtr user_data, CustomOpenTK.Compute.CL10.ErrorCode[] errcode_ret)
+        public static unsafe IntPtr CreateContext(ContextProperties[] properties, uint num_devices, IntPtr[] devices, IntPtr pfn_notify, IntPtr user_data, OpenTK.Compute.CL10.ErrorCode[] errcode_ret)
         {
             IntPtr[] properties_correct = properties != null ? new IntPtr[properties.Length] : null;
 			for (int i = 0; i < properties_correct.Length; i++)
@@ -110,19 +110,19 @@ namespace CustomOpenTK.Compute.CL10
             return CreateContext(properties_correct, num_devices, devices, pfn_notify, user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContext(ref ContextProperties properties, uint num_devices, ref IntPtr devices, IntPtr pfn_notify, IntPtr user_data, out CustomOpenTK.Compute.CL10.ErrorCode errcode_ret)
+        public static unsafe IntPtr CreateContext(ref ContextProperties properties, uint num_devices, ref IntPtr devices, IntPtr pfn_notify, IntPtr user_data, out OpenTK.Compute.CL10.ErrorCode errcode_ret)
         {
             IntPtr properties_correct = new IntPtr((int)properties);
             return CreateContext(ref properties_correct, num_devices, ref devices, pfn_notify, user_data, out errcode_ret);
         }
 		
-		public static unsafe IntPtr CreateContext<T4>(ContextProperties* properties, uint num_devices, IntPtr* devices, IntPtr pfn_notify, ref T4 user_data, CustomOpenTK.Compute.CL10.ErrorCode* errcode_ret)
+		public static unsafe IntPtr CreateContext<T4>(ContextProperties* properties, uint num_devices, IntPtr* devices, IntPtr pfn_notify, ref T4 user_data, OpenTK.Compute.CL10.ErrorCode* errcode_ret)
 			where T4 : struct
         {
             return CreateContext((IntPtr*)properties, num_devices, devices, pfn_notify, ref user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContext<T4>(ContextProperties[] properties, uint num_devices, IntPtr[] devices, IntPtr pfn_notify, ref T4 user_data, CustomOpenTK.Compute.CL10.ErrorCode[] errcode_ret)
+        public static unsafe IntPtr CreateContext<T4>(ContextProperties[] properties, uint num_devices, IntPtr[] devices, IntPtr pfn_notify, ref T4 user_data, OpenTK.Compute.CL10.ErrorCode[] errcode_ret)
 			where T4 : struct
         {
             IntPtr[] properties_correct = properties != null ? new IntPtr[properties.Length] : null;
@@ -131,19 +131,19 @@ namespace CustomOpenTK.Compute.CL10
             return CreateContext(properties_correct, num_devices, devices, pfn_notify, ref user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContext<T4>(ref ContextProperties properties, uint num_devices, ref IntPtr devices, IntPtr pfn_notify, ref T4 user_data, out CustomOpenTK.Compute.CL10.ErrorCode errcode_ret)
+        public static unsafe IntPtr CreateContext<T4>(ref ContextProperties properties, uint num_devices, ref IntPtr devices, IntPtr pfn_notify, ref T4 user_data, out OpenTK.Compute.CL10.ErrorCode errcode_ret)
 			where T4 : struct
         {
             IntPtr properties_correct = new IntPtr((int)properties);
             return CreateContext(ref properties_correct, num_devices, ref devices, pfn_notify, ref user_data, out errcode_ret);
         }
 		
-        public static unsafe IntPtr CreateContextFromType(ContextProperties* properties, DeviceTypeFlags device_type, IntPtr pfn_notify, IntPtr user_data, CustomOpenTK.Compute.CL10.ErrorCode* errcode_ret)
+        public static unsafe IntPtr CreateContextFromType(ContextProperties* properties, DeviceTypeFlags device_type, IntPtr pfn_notify, IntPtr user_data, OpenTK.Compute.CL10.ErrorCode* errcode_ret)
         {
             return CreateContextFromType((IntPtr*)properties, device_type, pfn_notify, user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContextFromType(ContextProperties[] properties, DeviceTypeFlags device_type, IntPtr pfn_notify, IntPtr user_data, CustomOpenTK.Compute.CL10.ErrorCode[] errcode_ret)
+        public static unsafe IntPtr CreateContextFromType(ContextProperties[] properties, DeviceTypeFlags device_type, IntPtr pfn_notify, IntPtr user_data, OpenTK.Compute.CL10.ErrorCode[] errcode_ret)
         {
 			IntPtr[] properties_correct = properties != null ? new IntPtr[properties.Length] : null;
 			for (int i = 0; i < properties_correct.Length; i++)
@@ -151,19 +151,19 @@ namespace CustomOpenTK.Compute.CL10
             return CreateContextFromType(properties_correct, device_type, pfn_notify, user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContextFromType(ref ContextProperties properties, DeviceTypeFlags device_type, IntPtr pfn_notify, IntPtr user_data, out CustomOpenTK.Compute.CL10.ErrorCode errcode_ret)
+        public static unsafe IntPtr CreateContextFromType(ref ContextProperties properties, DeviceTypeFlags device_type, IntPtr pfn_notify, IntPtr user_data, out OpenTK.Compute.CL10.ErrorCode errcode_ret)
         {
 			IntPtr properties_correct = new IntPtr((int)properties);
             return CreateContextFromType(ref properties_correct, device_type, pfn_notify, user_data, out errcode_ret);
         }
 		
-		public static unsafe IntPtr CreateContextFromType<T4>(ContextProperties* properties, DeviceTypeFlags device_type, IntPtr pfn_notify, ref T4 user_data, CustomOpenTK.Compute.CL10.ErrorCode* errcode_ret)
+		public static unsafe IntPtr CreateContextFromType<T4>(ContextProperties* properties, DeviceTypeFlags device_type, IntPtr pfn_notify, ref T4 user_data, OpenTK.Compute.CL10.ErrorCode* errcode_ret)
 			where T4 : struct
         {
             return CreateContextFromType((IntPtr*)properties, device_type, pfn_notify, ref user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContextFromType<T4>(ContextProperties[] properties, DeviceTypeFlags device_type, IntPtr pfn_notify, ref T4 user_data, CustomOpenTK.Compute.CL10.ErrorCode[] errcode_ret)
+        public static unsafe IntPtr CreateContextFromType<T4>(ContextProperties[] properties, DeviceTypeFlags device_type, IntPtr pfn_notify, ref T4 user_data, OpenTK.Compute.CL10.ErrorCode[] errcode_ret)
 			where T4 : struct
         {
 			IntPtr[] properties_correct = properties != null ? new IntPtr[properties.Length] : null;
@@ -172,7 +172,7 @@ namespace CustomOpenTK.Compute.CL10
             return CreateContextFromType(properties_correct, device_type, pfn_notify, ref user_data, errcode_ret);
         }
         
-        public static unsafe IntPtr CreateContextFromType<T4>(ref ContextProperties properties, DeviceTypeFlags device_type, IntPtr pfn_notify, ref T4 user_data, out CustomOpenTK.Compute.CL10.ErrorCode errcode_ret)
+        public static unsafe IntPtr CreateContextFromType<T4>(ref ContextProperties properties, DeviceTypeFlags device_type, IntPtr pfn_notify, ref T4 user_data, out OpenTK.Compute.CL10.ErrorCode errcode_ret)
 			where T4 : struct
         {
 			IntPtr properties_correct = new IntPtr((int)properties);

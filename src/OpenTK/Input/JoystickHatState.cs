@@ -29,7 +29,7 @@
 
 using System;
 
-namespace CustomOpenTK.Input
+namespace OpenTK.Input
 {
     /// <summary>
     /// Describes the state of a joystick hat.
@@ -115,9 +115,9 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String"/> that represents the current <see cref="CustomOpenTK.Input.JoystickHatState"/>.
+        /// Returns a <see cref="System.String"/> that represents the current <see cref="OpenTK.Input.JoystickHatState"/>.
         /// </summary>
-        /// <returns>A <see cref="System.String"/> that represents the current <see cref="CustomOpenTK.Input.JoystickHatState"/>.</returns>
+        /// <returns>A <see cref="System.String"/> that represents the current <see cref="OpenTK.Input.JoystickHatState"/>.</returns>
         public override string ToString()
         {
             return String.Format(
@@ -129,7 +129,7 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Serves as a hash function for a <see cref="CustomOpenTK.Input.JoystickHatState"/> object.
+        /// Serves as a hash function for a <see cref="OpenTK.Input.JoystickHatState"/> object.
         /// </summary>
         /// <returns>A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a
         /// hash table.</returns>
@@ -139,11 +139,11 @@ namespace CustomOpenTK.Input
         }
 
         /// <summary>
-        /// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="CustomOpenTK.Input.JoystickHatState"/>.
+        /// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="OpenTK.Input.JoystickHatState"/>.
         /// </summary>
-        /// <param name="obj">The <see cref="System.Object"/> to compare with the current <see cref="CustomOpenTK.Input.JoystickHatState"/>.</param>
+        /// <param name="obj">The <see cref="System.Object"/> to compare with the current <see cref="OpenTK.Input.JoystickHatState"/>.</param>
         /// <returns><c>true</c> if the specified <see cref="System.Object"/> is equal to the current
-        /// <see cref="CustomOpenTK.Input.JoystickHatState"/>; otherwise, <c>false</c>.</returns>
+        /// <see cref="OpenTK.Input.JoystickHatState"/>; otherwise, <c>false</c>.</returns>
         public override bool Equals(object obj)
         {
             return
@@ -154,11 +154,11 @@ namespace CustomOpenTK.Input
         #region IEquatable<JoystickHatState> implementation
 
         /// <summary>
-        /// Determines whether the specified <see cref="CustomOpenTK.Input.JoystickHatState"/> is equal to the current <see cref="CustomOpenTK.Input.JoystickHatState"/>.
+        /// Determines whether the specified <see cref="OpenTK.Input.JoystickHatState"/> is equal to the current <see cref="OpenTK.Input.JoystickHatState"/>.
         /// </summary>
-        /// <param name="other">The <see cref="CustomOpenTK.Input.JoystickHatState"/> to compare with the current <see cref="CustomOpenTK.Input.JoystickHatState"/>.</param>
-        /// <returns><c>true</c> if the specified <see cref="CustomOpenTK.Input.JoystickHatState"/> is equal to the current
-        /// <see cref="CustomOpenTK.Input.JoystickHatState"/>; otherwise, <c>false</c>.</returns>
+        /// <param name="other">The <see cref="OpenTK.Input.JoystickHatState"/> to compare with the current <see cref="OpenTK.Input.JoystickHatState"/>.</param>
+        /// <returns><c>true</c> if the specified <see cref="OpenTK.Input.JoystickHatState"/> is equal to the current
+        /// <see cref="OpenTK.Input.JoystickHatState"/>; otherwise, <c>false</c>.</returns>
         public bool Equals(JoystickHatState other)
         {
             return Position == other.Position;

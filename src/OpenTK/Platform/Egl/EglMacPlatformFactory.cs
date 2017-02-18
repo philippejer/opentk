@@ -28,10 +28,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Platform.MacOS;
+using OpenTK.Graphics;
+using OpenTK.Platform.MacOS;
 
-namespace CustomOpenTK.Platform.Egl
+namespace OpenTK.Platform.Egl
 {
     class EglMacPlatformFactory : MacOSFactory
     {

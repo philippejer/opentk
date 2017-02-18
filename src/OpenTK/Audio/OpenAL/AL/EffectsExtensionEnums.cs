@@ -1,4 +1,4 @@
-﻿#region --- CustomOpenTK.OpenAL License ---
+﻿#region --- OpenTK.OpenAL License ---
 /* EfxTokens.cs
  * C headers: \OpenAL 1.1 SDK\include\ "efx.h", "efx-creative.h", "Efx-Util.h"
  * Spec: Effects Extension Guide.pdf (bundled with OpenAL SDK)
@@ -9,7 +9,7 @@
 
 using System;
 
-namespace CustomOpenTK.Audio.OpenAL
+namespace OpenTK.Audio.OpenAL
 {
     #region Effect
 

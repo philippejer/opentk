@@ -27,7 +27,7 @@
 
 using System;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Defines bitwise combianations of GameWindow construction options.

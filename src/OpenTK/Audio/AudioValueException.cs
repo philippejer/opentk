@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Audio
+namespace OpenTK.Audio
 {
     /// <summary>Represents exceptions related to invalid values.</summary>
     public class AudioValueException : AudioException

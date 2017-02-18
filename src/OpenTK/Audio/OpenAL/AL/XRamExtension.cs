@@ -1,4 +1,4 @@
-﻿#region --- CustomOpenTK.OpenAL License ---
+﻿#region --- OpenTK.OpenAL License ---
 /* XRamExtension.cs
  * C header: \OpenAL 1.1 SDK\include\xram.h
  * Spec: ?
@@ -11,7 +11,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Audio.OpenAL
+namespace OpenTK.Audio.OpenAL
 {
 
     ///<summary>

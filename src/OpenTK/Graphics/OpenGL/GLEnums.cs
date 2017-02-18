@@ -27,7 +27,7 @@
 
 using System;
 
-namespace CustomOpenTK.Graphics.OpenGL
+namespace OpenTK.Graphics.OpenGL
 {
     /// <summary>
     /// Used in GL.Accum

@@ -12,9 +12,9 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     class X11GraphicsMode
     {

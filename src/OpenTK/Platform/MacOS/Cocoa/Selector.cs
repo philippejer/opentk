@@ -30,7 +30,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     static class Selector
     {

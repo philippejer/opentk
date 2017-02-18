@@ -29,9 +29,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     class AglGraphicsMode
     {

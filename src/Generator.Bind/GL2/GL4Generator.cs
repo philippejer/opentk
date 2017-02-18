@@ -40,7 +40,7 @@ namespace Bind.GL2
         {
             Settings.DefaultOutputPath = Path.Combine(
                 Settings.DefaultOutputPath, "../OpenGL4");
-            Settings.DefaultOutputNamespace = "CustomOpenTK.Graphics.OpenGL4";
+            Settings.DefaultOutputNamespace = "OpenTK.Graphics.OpenGL4";
             Settings.DefaultImportsFile = "GL4Core.cs";
             Settings.DefaultDelegatesFile = "GL4Delegates.cs";
             Settings.DefaultEnumsFile = "GL4Enums.cs";

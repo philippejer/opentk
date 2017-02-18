@@ -1,5 +1,5 @@
 type project
-id CustomOpenTK.iOS
+id OpenTK.iOS
 owners
     opentk thefiddler
 authors 

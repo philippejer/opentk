@@ -31,9 +31,9 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.Linux
+namespace OpenTK.Platform.Linux
 {
     // Todo: this has terrible side-effects on process exit
     // (the keyboard remains tied up.) We need to find a

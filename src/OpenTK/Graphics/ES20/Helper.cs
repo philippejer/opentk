@@ -33,7 +33,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CustomOpenTK.Graphics.ES20
+namespace OpenTK.Graphics.ES20
 {
     /// <summary>
     /// Provides access to OpenGL ES 2.0 methods.
@@ -442,12 +442,12 @@ namespace CustomOpenTK.Graphics.ES20
             GL.Viewport(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
         }
 #if MINIMAL
-        public static void Viewport(CustomOpenTK.Point location, CustomOpenTK.Size size)
+        public static void Viewport(OpenTK.Point location, OpenTK.Size size)
         {
             GL.Viewport(location.X, location.Y, size.Width, size.Height);
         }
 
-        public static void Viewport(CustomOpenTK.Rectangle rectangle)
+        public static void Viewport(OpenTK.Rectangle rectangle)
         {
             GL.Viewport(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
         }

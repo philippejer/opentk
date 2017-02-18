@@ -48,7 +48,7 @@ namespace Bind
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
             Trace.AutoFlush = true;
 
-            Console.WriteLine("OpenGL binding generator {0} for CustomOpenTK.",
+            Console.WriteLine("OpenGL binding generator {0} for OpenTK.",
                 Assembly.GetExecutingAssembly().GetName().Version.ToString());
             Console.WriteLine("For comments, bugs and suggestions visit http://github.com/opentk/opentk");
             Console.WriteLine();
@@ -285,8 +285,8 @@ namespace Bind
 Available switches:
 -in:         Input directory (e.g. -in:../specs/)
 -out:        Output directory (e.g. -out:out)
--ns:         Output namespace (e.g. -ns:CustomOpenTK.Graphics).
-             Default: CustomOpenTK.Graphics.OpenGL
+-ns:         Output namespace (e.g. -ns:OpenTK.Graphics).
+             Default: OpenTK.Graphics.OpenGL
 -namespace:  Same as -ns
 -class:      Output class (e.g. -class:GL3).
              Default: GL/Wgl/Glu/Glx (depends on -mode)
@@ -299,7 +299,7 @@ Available switches:
     -o:safe  Do not generate public unsafe functions.
     -o:enums_in_class
              Place enums in a nested class (i.e. GL.Enums)
-             instead of a namespace (i.e. CustomOpenTK.Graphics.OpenGL.Enums)
+             instead of a namespace (i.e. OpenTK.Graphics.OpenGL.Enums)
 ");
         }
     }

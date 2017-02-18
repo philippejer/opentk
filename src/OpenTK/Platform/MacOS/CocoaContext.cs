@@ -28,14 +28,14 @@
 #endregion
 
 using System;
-using CustomOpenTK.Platform;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Platform.MacOS;
+using OpenTK.Platform;
+using OpenTK.Graphics;
+using OpenTK.Platform.MacOS;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     class CocoaContext : DesktopGraphicsContext
     {

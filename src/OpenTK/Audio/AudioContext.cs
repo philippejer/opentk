@@ -31,9 +31,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-using CustomOpenTK.Audio.OpenAL;
+using OpenTK.Audio.OpenAL;
 
-namespace CustomOpenTK.Audio
+namespace OpenTK.Audio
 {
     /// <summary>
     /// Provides methods to instantiate, use and destroy an audio context for playback.
@@ -359,7 +359,7 @@ namespace CustomOpenTK.Audio
 
         /// \internal
         /// <summary>Makes the specified AudioContext current in the calling thread.</summary>
-        /// <param name="context">The CustomOpenTK.Audio.AudioContext to make current, or null.</param>
+        /// <param name="context">The OpenTK.Audio.AudioContext to make current, or null.</param>
         /// <exception cref="ObjectDisposedException">
         /// Occurs if this function is called after the AudioContext has been disposed.
         /// </exception>
@@ -631,7 +631,7 @@ namespace CustomOpenTK.Audio
         #region public static AudioContext CurrentContext
 
         /// <summary>
-        /// Gets the CustomOpenTK.Audio.AudioContext which is current in the application.
+        /// Gets the OpenTK.Audio.AudioContext which is current in the application.
         /// </summary>
         /// <remarks>
         /// Only one AudioContext can be current in the application at any time,

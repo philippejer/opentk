@@ -27,10 +27,10 @@
 
 using System;
 using System.Diagnostics;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Input;
+using OpenTK.Graphics;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.SDL2
+namespace OpenTK.Platform.SDL2
 {
     class Sdl2Factory : PlatformFactoryBase
     {

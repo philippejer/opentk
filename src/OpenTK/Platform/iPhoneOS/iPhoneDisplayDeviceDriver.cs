@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CustomOpenTK.Platform;
+using OpenTK.Platform;
 
-namespace CustomOpenTK.Platform.iPhoneOS
+namespace OpenTK.Platform.iPhoneOS
 {
     class AndroidDisplayDeviceDriver : IDisplayDeviceDriver
     {

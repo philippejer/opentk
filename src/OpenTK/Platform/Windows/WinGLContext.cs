@@ -13,12 +13,12 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Graphics.OpenGL;
+using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
 
 #endregion
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     /// \internal
     /// <summary>

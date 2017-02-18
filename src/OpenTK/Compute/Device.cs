@@ -31,7 +31,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace CustomOpenTK.Compute
+namespace OpenTK.Compute
 {
 
 }

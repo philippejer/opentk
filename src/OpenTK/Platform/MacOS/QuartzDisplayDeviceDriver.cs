@@ -31,9 +31,9 @@ using System.Diagnostics;
 #if !MINIMAL
 using System.Drawing;
 #endif
-using CustomOpenTK.Platform.MacOS.Carbon;
+using OpenTK.Platform.MacOS.Carbon;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     sealed class QuartzDisplayDeviceDriver : DisplayDeviceBase
     {
@@ -43,7 +43,7 @@ namespace CustomOpenTK.Platform.MacOS
         {
             lock (display_lock)
             {
-                // To minimize the need to add static methods to CustomOpenTK.Graphics.DisplayDevice
+                // To minimize the need to add static methods to OpenTK.Graphics.DisplayDevice
                 // we only allow settings to be set through its constructor.
                 // Thus, we save all necessary parameters in temporary variables
                 // and construct the device when every needed detail is available.

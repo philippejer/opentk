@@ -29,9 +29,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.Egl
+namespace OpenTK.Platform.Egl
 {
     // Holds information about an EGL window.
     class EglWindowInfo : IWindowInfo

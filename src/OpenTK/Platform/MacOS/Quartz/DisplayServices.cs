@@ -28,9 +28,9 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
-using CustomOpenTK.Platform.MacOS.Carbon;
+using OpenTK.Platform.MacOS.Carbon;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     using CGDirectDisplayID = System.IntPtr;
 

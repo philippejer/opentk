@@ -12,14 +12,14 @@ using System.Collections.Generic;
 using System.Drawing;
 #endif
 #if ANDROID || IPHONE || MINIMAL
-using CustomOpenTK.Minimal;
+using OpenTK.Minimal;
 #else
 using System.Drawing.Imaging;
 #endif
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.X11
+namespace OpenTK.Platform.X11
 {
     #region Types
 

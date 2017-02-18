@@ -1,7 +1,7 @@
 using System;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.Android
+namespace OpenTK.Platform.Android
 {
     [Obsolete("Kept for Xamarin compatibility, use GraphicsMode instead")]
     public class AndroidGraphicsMode : GraphicsMode
@@ -9,9 +9,9 @@ namespace CustomOpenTK.Platform.Android
         /// <summary>
         /// Creates an AndroidGraphicsMode instance with the defined settings.
         /// Defaults to EGL 1.x. To use EGL 2.0, call the
-        /// <see cref="M:CustomOpenTK.Platform.Android.AndroidGraphicsMode(Javax.Microedition.Khronos.Egl.EGLDisplay,int,OpenTK.Graphics.GraphicsMode)" />
+        /// <see cref="M:OpenTK.Platform.Android.AndroidGraphicsMode(Javax.Microedition.Khronos.Egl.EGLDisplay,int,OpenTK.Graphics.GraphicsMode)" />
         /// or
-        /// <see cref="M:CustomOpenTK.Platform.Android.AndroidGraphicsMode(Javax.Microedition.Khronos.Egl.EGLDisplay,int,OpenTK.Graphics.ColorFormat,int,int,int,int,bool)" />
+        /// <see cref="M:OpenTK.Platform.Android.AndroidGraphicsMode(Javax.Microedition.Khronos.Egl.EGLDisplay,int,OpenTK.Graphics.ColorFormat,int,int,int,int,bool)" />
         /// constructors (pass null to the display parameter for lazy initialization)
         /// </summary>
         public AndroidGraphicsMode(ColorFormat color, int depth, int stencil, int samples, int buffers, bool stereo) :

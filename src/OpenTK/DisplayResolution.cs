@@ -14,7 +14,7 @@ using System.Diagnostics;
 using System.Drawing;
 #endif
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>Contains information regarding a monitor's display resolution.</summary>
     public class DisplayResolution
@@ -56,7 +56,7 @@ namespace CustomOpenTK
         /// <param name="height">The requested height in pixels.</param>
         /// <param name="bitsPerPixel">The requested bits per pixel in bits.</param>
         /// <param name="refreshRate">The requested refresh rate in hertz.</param>
-        /// <remarks>CustomOpenTK will select the closest match between all available resolutions on the specified DisplayDevice.</remarks>
+        /// <remarks>OpenTK will select the closest match between all available resolutions on the specified DisplayDevice.</remarks>
         /// 
         public DisplayResolution(int width, int height, int bitsPerPixel, float refreshRate, DisplayDevice device)
         {

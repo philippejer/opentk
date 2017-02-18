@@ -7,7 +7,7 @@ using System.Text;
 
 #if ANDROID || IPHONE || MINIMAL
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     // Override a number of System.* classes when compiling for
     // minimal targets (e.g. MonoTouch).
@@ -1697,14 +1697,14 @@ namespace CustomOpenTK
     #endregion
 }
 
-// Need a different namespace to avoid clash with CustomOpenTK.Graphics.
-namespace CustomOpenTK.Minimal
+// Need a different namespace to avoid clash with OpenTK.Graphics.
+namespace OpenTK.Minimal
 {
     #region Graphics
 
     sealed class Graphics : IDisposable
     {
-        public static Graphics FromImage(CustomOpenTK.Image img)
+        public static Graphics FromImage(OpenTK.Image img)
         {
             return new Graphics();
         }
@@ -1712,7 +1712,7 @@ namespace CustomOpenTK.Minimal
         public void Dispose()
         { }
 
-        internal void DrawImage(CustomOpenTK.Bitmap bitmap, int p, int p_2, int p_3, int p_4)
+        internal void DrawImage(OpenTK.Bitmap bitmap, int p, int p_2, int p_3, int p_4)
         {
         }
     }

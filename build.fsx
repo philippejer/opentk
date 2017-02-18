@@ -24,7 +24,7 @@ open System.IO
 
 // The name of the project
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "CustomOpenTK"
+let project = "OpenTK"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
@@ -38,12 +38,12 @@ let description = "The Open Toolkit is set of fast, low-level C# bindings for Op
 let authors = [ "Stefanos Apostolopoulos" ]
 
 // Tags for your project (for NuGet package)
-let tags = "CustomOpenTK OpenGL OpenGLES GLES OpenAL C# F# VB .NET Mono Vector Math Game Graphics Sound"
+let tags = "OpenTK OpenGL OpenGLES GLES OpenAL C# F# VB .NET Mono Vector Math Game Graphics Sound"
 
 let copyright = "Copyright (c) 2006 - 2016 Stefanos Apostolopoulos <stapostol@gmail.com> for the Open Toolkit library."
 
 // File system information 
-let solutionFile  = "CustomOpenTK.sln"
+let solutionFile  = "OpenTK.sln"
 
 // Pattern specifying assemblies to be tested using NUnit
 let testAssemblies = "tests/**/bin/Release/*Tests*.dll"
@@ -170,14 +170,14 @@ Target "NuGet" (fun _ ->
         if isXamarinPlatform then
             []
         else
-            [ "CustomOpenTK.Android"
-              "CustomOpenTK.iOS" ]
+            [ "OpenTK.Android"
+              "OpenTK.iOS" ]
 
 
     Paket.Pack(fun p -> 
         { p with
             OutputPath = "bin"
-            ExcludedTemplates = "CustomOpenTK.GLWidget" :: xamExcludes
+            ExcludedTemplates = "OpenTK.GLWidget" :: xamExcludes
             Version = release.NugetVersion
             ReleaseNotes = toLines release.Notes})
 )

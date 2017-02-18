@@ -32,7 +32,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     #region BlittableValueType<T>
 

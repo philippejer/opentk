@@ -31,7 +31,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     /// \internal
     /// <summary>Describes a win32 window.</summary>

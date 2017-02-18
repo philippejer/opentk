@@ -35,7 +35,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Security;
-using CustomOpenTK.Platform.Common;
+using OpenTK.Platform.Common;
 
 /* TODO: Update the description of TimeBeginPeriod and other native methods. Update Timer. */
 
@@ -44,7 +44,7 @@ using CustomOpenTK.Platform.Common;
 #pragma warning disable 0169    // field / method is never used.
 #pragma warning disable 0414    // field assigned but never used.
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     #region Type aliases
 
@@ -80,7 +80,7 @@ namespace CustomOpenTK.Platform.Windows
     using ATOM = System.Int32;
 
     using COLORREF = System.Int32;
-    using RECT = CustomOpenTK.Platform.Windows.Win32Rectangle;
+    using RECT = OpenTK.Platform.Windows.Win32Rectangle;
     using WNDPROC = System.IntPtr;
     using LPDEVMODE = DeviceMode;
     using HDEVNOTIFY = System.IntPtr;

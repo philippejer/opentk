@@ -30,12 +30,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Diagnostics;
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     class XInputJoystick : IJoystickDriver2, IDisposable
     {

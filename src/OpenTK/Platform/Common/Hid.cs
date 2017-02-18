@@ -31,9 +31,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.Common
+namespace OpenTK.Platform.Common
 {
     class HidHelper
     {

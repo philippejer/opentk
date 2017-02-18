@@ -31,7 +31,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Compute.CL10
+namespace OpenTK.Compute.CL10
 {
     struct ErrorHelper : IDisposable
     {

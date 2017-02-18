@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// 4-component Vector of the Half type. Occupies 8 Byte total.
@@ -127,7 +127,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half4 instance will convert the Vector4 into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4</param>
+        /// <param name="v">OpenTK.Vector4</param>
         [CLSCompliant(false)]
         public Vector4h(Vector4 v)
         {
@@ -140,7 +140,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half4 instance will convert the Vector4 into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4</param>
+        /// <param name="v">OpenTK.Vector4</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         [CLSCompliant(false)]
         public Vector4h(Vector4 v, bool throwOnError)
@@ -155,7 +155,7 @@ namespace CustomOpenTK
         /// The new Half4 instance will convert the Vector4 into 16-bit half-precision floating-point.
         /// This is the fastest constructor.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4</param>
+        /// <param name="v">OpenTK.Vector4</param>
         public Vector4h(ref Vector4 v)
         {
             X = new Half(v.X);
@@ -167,7 +167,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half4 instance will convert the Vector4 into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4</param>
+        /// <param name="v">OpenTK.Vector4</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         public Vector4h(ref Vector4 v, bool throwOnError)
         {
@@ -180,7 +180,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half4 instance will convert the Vector4d into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4d</param>
+        /// <param name="v">OpenTK.Vector4d</param>
         [CLSCompliant(false)]
         public Vector4h(Vector4d v)
         {
@@ -193,7 +193,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half4 instance will convert the Vector4d into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4d</param>
+        /// <param name="v">OpenTK.Vector4d</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         [CLSCompliant(false)]
         public Vector4h(Vector4d v, bool throwOnError)
@@ -208,7 +208,7 @@ namespace CustomOpenTK
         /// The new Half4 instance will convert the Vector4d into 16-bit half-precision floating-point.
         /// This is the faster constructor.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4d</param>
+        /// <param name="v">OpenTK.Vector4d</param>
         [CLSCompliant(false)]
         public Vector4h(ref Vector4d v)
         {
@@ -221,7 +221,7 @@ namespace CustomOpenTK
         /// <summary>
         /// The new Half4 instance will convert the Vector4d into 16-bit half-precision floating-point.
         /// </summary>
-        /// <param name="v">CustomOpenTK.Vector4d</param>
+        /// <param name="v">OpenTK.Vector4d</param>
         /// <param name="throwOnError">Enable checks that will throw if the conversion result is not meaningful.</param>
         [CLSCompliant(false)]
         public Vector4h(ref Vector4d v, bool throwOnError)
@@ -239,73 +239,73 @@ namespace CustomOpenTK
         #region 2-component
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the X and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the X and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Xy { get { return new Vector2h(X, Y); } set { X = value.X; Y = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the X and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the X and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Xz { get { return new Vector2h(X, Z); } set { X = value.X; Z = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the X and W components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the X and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Xw { get { return new Vector2h(X, W); } set { X = value.X; W = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the Y and X components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the Y and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Yx { get { return new Vector2h(Y, X); } set { Y = value.X; X = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the Y and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the Y and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Yz { get { return new Vector2h(Y, Z); } set { Y = value.X; Z = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the Y and W components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the Y and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Yw { get { return new Vector2h(Y, W); } set { Y = value.X; W = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the Z and X components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the Z and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Zx { get { return new Vector2h(Z, X); } set { Z = value.X; X = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the Z and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the Z and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Zy { get { return new Vector2h(Z, Y); } set { Z = value.X; Y = value.Y; } }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Vector2h with the Z and W components of this instance.
+        /// Gets an OpenTK.Vector2h with the Z and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Zw { get { return new Vector2h(Z, W); } set { Z = value.X; W = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the W and X components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the W and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Wx { get { return new Vector2h(W, X); } set { W = value.X; X = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the W and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the W and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Wy { get { return new Vector2h(W, Y); } set { W = value.X; Y = value.Y; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector2h with the W and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector2h with the W and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector2h Wz { get { return new Vector2h(W, Z); } set { W = value.X; Z = value.Y; } }
@@ -315,145 +315,145 @@ namespace CustomOpenTK
         #region 3-component
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the X, Y, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the X, Y, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Xyz { get { return new Vector3h(X, Y, Z); } set { X = value.X; Y = value.Y; Z = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the X, Y, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the X, Y, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Xyw { get { return new Vector3h(X, Y, W); } set { X = value.X; Y = value.Y; W = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the X, Z, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the X, Z, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Xzy { get { return new Vector3h(X, Z, Y); } set { X = value.X; Z = value.Y; Y = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the X, Z, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the X, Z, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Xzw { get { return new Vector3h(X, Z, W); } set { X = value.X; Z = value.Y; W = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the X, W, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the X, W, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Xwy { get { return new Vector3h(X, W, Y); } set { X = value.X; W = value.Y; Y = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the X, W, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the X, W, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Xwz { get { return new Vector3h(X, W, Z); } set { X = value.X; W = value.Y; Z = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Y, X, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Y, X, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Yxz { get { return new Vector3h(Y, X, Z); } set { Y = value.X; X = value.Y; Z = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Y, X, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Y, X, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Yxw { get { return new Vector3h(Y, X, W); } set { Y = value.X; X = value.Y; W = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Y, Z, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Y, Z, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Yzx { get { return new Vector3h(Y, Z, X); } set { Y = value.X; Z = value.Y; X = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Y, Z, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Y, Z, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Yzw { get { return new Vector3h(Y, Z, W); } set { Y = value.X; Z = value.Y; W = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Y, W, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Y, W, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Ywx { get { return new Vector3h(Y, W, X); } set { Y = value.X; W = value.Y; X = value.Z; } }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Vector3h with the Y, W, and Z components of this instance.
+        /// Gets an OpenTK.Vector3h with the Y, W, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Ywz { get { return new Vector3h(Y, W, Z); } set { Y = value.X; W = value.Y; Z = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Z, X, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Z, X, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Zxy { get { return new Vector3h(Z, X, Y); } set { Z = value.X; X = value.Y; Y = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Z, X, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Z, X, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Zxw { get { return new Vector3h(Z, X, W); } set { Z = value.X; X = value.Y; W = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Z, Y, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Z, Y, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Zyx { get { return new Vector3h(Z, Y, X); } set { Z = value.X; Y = value.Y; X = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Z, Y, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Z, Y, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Zyw { get { return new Vector3h(Z, Y, W); } set { Z = value.X; Y = value.Y; W = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Z, W, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Z, W, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Zwx { get { return new Vector3h(Z, W, X); } set { Z = value.X; W = value.Y; X = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the Z, W, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the Z, W, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Zwy { get { return new Vector3h(Z, W, Y); } set { Z = value.X; W = value.Y; Y = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the W, X, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the W, X, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Wxy { get { return new Vector3h(W, X, Y); } set { W = value.X; X = value.Y; Y = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the W, X, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the W, X, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Wxz { get { return new Vector3h(W, X, Z); } set { W = value.X; X = value.Y; Z = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the W, Y, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the W, Y, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Wyx { get { return new Vector3h(W, Y, X); } set { W = value.X; Y = value.Y; X = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the W, Y, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the W, Y, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Wyz { get { return new Vector3h(W, Y, Z); } set { W = value.X; Y = value.Y; Z = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the W, Z, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the W, Z, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Wzx { get { return new Vector3h(W, Z, X); } set { W = value.X; Z = value.Y; X = value.Z; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector3h with the W, Z, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector3h with the W, Z, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector3h Wzy { get { return new Vector3h(W, Z, Y); } set { W = value.X; Z = value.Y; Y = value.Z; } }
@@ -463,163 +463,163 @@ namespace CustomOpenTK
         #region 4-component
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the X, Y, W, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the X, Y, W, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Xywz { get { return new Vector4h(X, Y, W, Z); } set { X = value.X; Y = value.Y; W = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the X, Z, Y, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the X, Z, Y, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Xzyw { get { return new Vector4h(X, Z, Y, W); } set { X = value.X; Z = value.Y; Y = value.Z; W = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the X, Z, W, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the X, Z, W, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Xzwy { get { return new Vector4h(X, Z, W, Y); } set { X = value.X; Z = value.Y; W = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the X, W, Y, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the X, W, Y, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Xwyz { get { return new Vector4h(X, W, Y, Z); } set { X = value.X; W = value.Y; Y = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the X, W, Z, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the X, W, Z, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Xwzy { get { return new Vector4h(X, W, Z, Y); } set { X = value.X; W = value.Y; Z = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Y, X, Z, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Y, X, Z, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Yxzw { get { return new Vector4h(Y, X, Z, W); } set { Y = value.X; X = value.Y; Z = value.Z; W = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Y, X, W, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Y, X, W, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Yxwz { get { return new Vector4h(Y, X, W, Z); } set { Y = value.X; X = value.Y; W = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Vector4h with the Y, Y, Z, and W components of this instance.
+        /// Gets an OpenTK.Vector4h with the Y, Y, Z, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Yyzw { get { return new Vector4h(Y, Y, Z, W); } set { X = value.X; Y = value.Y; Z = value.Z; W = value.W; } }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Vector4h with the Y, Y, W, and Z components of this instance.
+        /// Gets an OpenTK.Vector4h with the Y, Y, W, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Yywz { get { return new Vector4h(Y, Y, W, Z); } set { X = value.X; Y = value.Y; W = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Y, Z, X, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Y, Z, X, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Yzxw { get { return new Vector4h(Y, Z, X, W); } set { Y = value.X; Z = value.Y; X = value.Z; W = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Y, Z, W, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Y, Z, W, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Yzwx { get { return new Vector4h(Y, Z, W, X); } set { Y = value.X; Z = value.Y; W = value.Z; X = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Y, W, X, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Y, W, X, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Ywxz { get { return new Vector4h(Y, W, X, Z); } set { Y = value.X; W = value.Y; X = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Y, W, Z, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Y, W, Z, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Ywzx { get { return new Vector4h(Y, W, Z, X); } set { Y = value.X; W = value.Y; Z = value.Z; X = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Z, X, Y, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Z, X, Y, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zxyw { get { return new Vector4h(Z, X, Y, W); } set { Z = value.X; X = value.Y; Y = value.Z; W = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Z, X, W, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Z, X, W, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zxwy { get { return new Vector4h(Z, X, W, Y); } set { Z = value.X; X = value.Y; W = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Z, Y, X, and W components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Z, Y, X, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zyxw { get { return new Vector4h(Z, Y, X, W); } set { Z = value.X; Y = value.Y; X = value.Z; W = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Z, Y, W, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Z, Y, W, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zywx { get { return new Vector4h(Z, Y, W, X); } set { Z = value.X; Y = value.Y; W = value.Z; X = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Z, W, X, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Z, W, X, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zwxy { get { return new Vector4h(Z, W, X, Y); } set { Z = value.X; W = value.Y; X = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the Z, W, Y, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the Z, W, Y, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zwyx { get { return new Vector4h(Z, W, Y, X); } set { Z = value.X; W = value.Y; Y = value.Z; X = value.W; } }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Vector4h with the Z, W, Z, and Y components of this instance.
+        /// Gets an OpenTK.Vector4h with the Z, W, Z, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Zwzy { get { return new Vector4h(Z, W, Z, Y); } set { X = value.X; W = value.Y; Z = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the W, X, Y, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the W, X, Y, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wxyz { get { return new Vector4h(W, X, Y, Z); } set { W = value.X; X = value.Y; Y = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the W, X, Z, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the W, X, Z, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wxzy { get { return new Vector4h(W, X, Z, Y); } set { W = value.X; X = value.Y; Z = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the W, Y, X, and Z components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the W, Y, X, and Z components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wyxz { get { return new Vector4h(W, Y, X, Z); } set { W = value.X; Y = value.Y; X = value.Z; Z = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the W, Y, Z, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the W, Y, Z, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wyzx { get { return new Vector4h(W, Y, Z, X); } set { W = value.X; Y = value.Y; Z = value.Z; X = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the W, Z, X, and Y components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the W, Z, X, and Y components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wzxy { get { return new Vector4h(W, Z, X, Y); } set { W = value.X; Z = value.Y; X = value.Z; Y = value.W; } }
 
         /// <summary>
-        /// Gets or sets an CustomOpenTK.Vector4h with the W, Z, Y, and X components of this instance.
+        /// Gets or sets an OpenTK.Vector4h with the W, Z, Y, and X components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wzyx { get { return new Vector4h(W, Z, Y, X); } set { W = value.X; Z = value.Y; Y = value.Z; X = value.W; } }
 
         /// <summary>
-        /// Gets an CustomOpenTK.Vector4h with the W, Z, Y, and W components of this instance.
+        /// Gets an OpenTK.Vector4h with the W, Z, Y, and W components of this instance.
         /// </summary>
         [XmlIgnore]
         public Vector4h Wzyw { get { return new Vector4h(W, Z, Y, W); } set { X = value.X; Z = value.Y; Y = value.Z; W = value.W; } }
@@ -633,7 +633,7 @@ namespace CustomOpenTK
         /// <summary>
         /// Returns this Half4 instance's contents as Vector4.
         /// </summary>
-        /// <returns>CustomOpenTK.Vector4</returns>
+        /// <returns>OpenTK.Vector4</returns>
         public Vector4 ToVector4()
         {
             return new Vector4(X, Y, Z, W);
@@ -651,7 +651,7 @@ namespace CustomOpenTK
 
         #region Conversions
 
-        /// <summary>Converts CustomOpenTK.Vector4 to CustomOpenTK.Half4.</summary>
+        /// <summary>Converts OpenTK.Vector4 to OpenTK.Half4.</summary>
         /// <param name="v4f">The Vector4 to convert.</param>
         /// <returns>The resulting Half vector.</returns>
         public static explicit operator Vector4h(Vector4 v4f)
@@ -659,7 +659,7 @@ namespace CustomOpenTK
             return new Vector4h(v4f);
         }
 
-        /// <summary>Converts CustomOpenTK.Vector4d to CustomOpenTK.Half4.</summary>
+        /// <summary>Converts OpenTK.Vector4d to OpenTK.Half4.</summary>
         /// <param name="v4d">The Vector4d to convert.</param>
         /// <returns>The resulting Half vector.</returns>
         public static explicit operator Vector4h(Vector4d v4d)
@@ -667,7 +667,7 @@ namespace CustomOpenTK
             return new Vector4h(v4d);
         }
 
-        /// <summary>Converts CustomOpenTK.Half4 to CustomOpenTK.Vector4.</summary>
+        /// <summary>Converts OpenTK.Half4 to OpenTK.Vector4.</summary>
         /// <param name="h4">The Half4 to convert.</param>
         /// <returns>The resulting Vector4.</returns>
         public static explicit operator Vector4(Vector4h h4)
@@ -680,7 +680,7 @@ namespace CustomOpenTK
             return result;
         }
 
-        /// <summary>Converts CustomOpenTK.Half4 to CustomOpenTK.Vector4d.</summary>
+        /// <summary>Converts OpenTK.Half4 to OpenTK.Vector4d.</summary>
         /// <param name="h4">The Half4 to convert.</param>
         /// <returns>The resulting Vector4d.</returns>
         public static explicit operator Vector4d(Vector4h h4)
@@ -754,8 +754,8 @@ namespace CustomOpenTK
 
         #region IEquatable<Half4> Members
 
-        /// <summary>Returns a value indicating whether this instance is equal to a specified CustomOpenTK.Half4 vector.</summary>
-        /// <param name="other">CustomOpenTK.Half4 to compare to this instance..</param>
+        /// <summary>Returns a value indicating whether this instance is equal to a specified OpenTK.Half4 vector.</summary>
+        /// <param name="other">OpenTK.Half4 to compare to this instance..</param>
         /// <returns>True, if other is equal to this instance; false otherwise.</returns>
         public bool Equals(Vector4h other)
         {

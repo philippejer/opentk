@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK.Graphics
+namespace OpenTK.Graphics
 {
     /// <summary>
     /// Enumerates various flags that affect the creation of new GraphicsContexts.

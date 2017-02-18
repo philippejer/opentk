@@ -28,9 +28,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.Egl
+namespace OpenTK.Platform.Egl
 {
     class EglGraphicsMode
     {

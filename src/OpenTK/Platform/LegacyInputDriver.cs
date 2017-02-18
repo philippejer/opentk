@@ -29,9 +29,9 @@
 
 using System;
 using System.Collections.Generic;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform
+namespace OpenTK.Platform
 {
     // IInputDriver implementation to satisfy INativeWindow
     // while reducing code duplication.

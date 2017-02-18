@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     #if MINIMAL
     /// <summary>

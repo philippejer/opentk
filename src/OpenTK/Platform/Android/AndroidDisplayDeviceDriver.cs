@@ -9,7 +9,7 @@
 
 using System;
 
-namespace CustomOpenTK.Platform.Android
+namespace OpenTK.Platform.Android
 {
     class AndroidDisplayDeviceDriver : IDisplayDeviceDriver
     {

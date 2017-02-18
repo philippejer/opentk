@@ -33,13 +33,13 @@ using System.Diagnostics;
 using System.Drawing;
 #endif
 using System.Runtime.InteropServices;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Input;
-using CustomOpenTK.Platform.Egl;
+using OpenTK.Graphics;
+using OpenTK.Input;
+using OpenTK.Platform.Egl;
 
-namespace CustomOpenTK.Platform.Linux
+namespace OpenTK.Platform.Linux
 {
-    using Egl = CustomOpenTK.Platform.Egl.Egl;
+    using Egl = OpenTK.Platform.Egl.Egl;
 
     class LinuxNativeWindow : NativeWindowBase
     {
@@ -337,7 +337,7 @@ namespace CustomOpenTK.Platform.Linux
         public override void ProcessEvents()
         {
             // Note: there is no event-based keyboard/mouse input available.
-            // We will fake that by polling CustomOpenTK.Input.
+            // We will fake that by polling OpenTK.Input.
             previous_keyboard = ProcessKeyboard(Keyboard.GetState());
             previous_mouse = ProcessMouse(Mouse.GetCursorState());
 

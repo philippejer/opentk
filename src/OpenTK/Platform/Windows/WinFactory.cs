@@ -31,10 +31,10 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
 
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Input;
+using OpenTK.Graphics;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
 
     class WinFactory : PlatformFactoryBase
@@ -53,7 +53,7 @@ namespace CustomOpenTK.Platform.Windows
         {
             if (System.Environment.OSVersion.Version.Major <= 4)
             {
-                throw new PlatformNotSupportedException("CustomOpenTK requires Windows XP or higher");
+                throw new PlatformNotSupportedException("OpenTK requires Windows XP or higher");
             }
 
             // Dynamically load opengl32.dll in order to use the extension loading capabilities of Wgl.
@@ -114,17 +114,17 @@ namespace CustomOpenTK.Platform.Windows
             };
         }
 
-        public override CustomOpenTK.Input.IKeyboardDriver2 CreateKeyboardDriver()
+        public override OpenTK.Input.IKeyboardDriver2 CreateKeyboardDriver()
         {
             return RawInputDriver.KeyboardDriver;
         }
 
-        public override CustomOpenTK.Input.IMouseDriver2 CreateMouseDriver()
+        public override OpenTK.Input.IMouseDriver2 CreateMouseDriver()
         {
             return RawInputDriver.MouseDriver;
         }
 
-        public override CustomOpenTK.Input.IGamePadDriver CreateGamePadDriver()
+        public override OpenTK.Input.IGamePadDriver CreateGamePadDriver()
         {
             return new MappedGamePadDriver();
         }

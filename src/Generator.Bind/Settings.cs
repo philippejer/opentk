@@ -22,7 +22,7 @@ namespace Bind
 
         public string DefaultInputPath = "../../../Source/Bind/Specifications";
         public string DefaultOutputPath = "../../../Source/OpenTK/Graphics/OpenGL";
-        public string DefaultOutputNamespace = "CustomOpenTK.Graphics.OpenGL";
+        public string DefaultOutputNamespace = "OpenTK.Graphics.OpenGL";
         public string DefaultDocPath = "../../../Source/Bind/Specifications/Docs";
         public string DefaultFallbackDocPath = "../../../Source/Bind/Specifications/Docs/GL";
         public string DefaultLicenseFile = "License.txt";
@@ -203,7 +203,7 @@ namespace Bind
             set { if (value) Compatibility |= Legacy.NoDropMultipleTokens; else Compatibility &= ~Legacy.NoDropMultipleTokens; }
         }
         
-        public string WindowsGDI = "CustomOpenTK.Platform.Windows.API";
+        public string WindowsGDI = "OpenTK.Platform.Windows.API";
 
         public Settings Clone()
         {

@@ -31,7 +31,7 @@ using System.Runtime.InteropServices;
 using System;
 using System.Collections.Generic;
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     static class Class
     {

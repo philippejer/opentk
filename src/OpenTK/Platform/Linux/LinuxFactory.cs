@@ -31,13 +31,13 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using CustomOpenTK.Graphics;
-using CustomOpenTK.Input;
-using CustomOpenTK.Platform.Egl;
+using OpenTK.Graphics;
+using OpenTK.Input;
+using OpenTK.Platform.Egl;
 
-namespace CustomOpenTK.Platform.Linux
+namespace OpenTK.Platform.Linux
 {
-    using Egl = CustomOpenTK.Platform.Egl.Egl;
+    using Egl = OpenTK.Platform.Egl.Egl;
 
     // Linux KMS platform
     class LinuxFactory : PlatformFactoryBase
@@ -242,7 +242,7 @@ namespace CustomOpenTK.Platform.Linux
             }
         }
 
-        public override CustomOpenTK.Input.IGamePadDriver CreateGamePadDriver()
+        public override OpenTK.Input.IGamePadDriver CreateGamePadDriver()
         {
             return new MappedGamePadDriver();
         }

@@ -27,7 +27,7 @@
 //
 #endregion
 
-namespace CustomOpenTK.Platform.MacOS
+namespace OpenTK.Platform.MacOS
 {
     enum NSApplicationPresentationOptions
     {

@@ -36,11 +36,11 @@ Instructions
 
 The simplest way to use OpenTK in your project is to install the [NuGet package](http://www.nuget.org/packages/OpenTK/).
 
-Note what installing NuGet package will add reference to CustomOpenTK.dll, but CustomOpenTK.dll.config 
+Note what installing NuGet package will add reference to OpenTK.dll, but OpenTK.dll.config 
 will not be copied to the project output directory automatically, so you need to add it to your project 
 and then enable the "Copy to Output Directory" option (as in step 3 below).
 
-To build OpenTK from source, simply double-click CustomOpenTK.sln and build through your IDE.
+To build OpenTK from source, simply double-click OpenTK.sln and build through your IDE.
 
 Alternatively, open a command prompt and type:
 ```
@@ -80,7 +80,7 @@ A pre-release package is available.
 https://www.nuget.org/packages/OpenTK.Next/1.2.2336.6514-pre
 https://www.nuget.org/packages/OpenTK.Next.GLControl/1.2.2336.6514-pre
 
-*The CustomOpenTK.Next package id will no longer be used for future releases.
+*The OpenTK.Next package id will no longer be used for future releases.
 
 
 ### 2014-07-24
@@ -120,7 +120,7 @@ Known issues
    - `DisplayDevice.ChangeResolution()` without a fullscreen `INativeWindow`.
    - Switching between `WindowBorder.Fixed` and `WindowBorder.Resizable`.
    - High-resolution mouse input. Additionally, it is limited to a single keyboard and mouse device.
-2. CustomOpenTK.Input.GamePad.SetVibration is currently not implemented. This API will be implemented in a future release.
+2. OpenTK.Input.GamePad.SetVibration is currently not implemented. This API will be implemented in a future release.
 
 
 Contributing
@@ -163,7 +163,7 @@ Requirements
 Documentation
 =============
 
-Your favorite IDE will display inline documentation for all OpenTK APIs. Additional information can be found in the [CustomOpenTK Manual](http://www.opentk.com/doc) and in the [opentk/Documentation/](https://github.com/opentk/opentk/tree/develop/Documentation) folder.
+Your favorite IDE will display inline documentation for all OpenTK APIs. Additional information can be found in the [OpenTK Manual](http://www.opentk.com/doc) and in the [opentk/Documentation/](https://github.com/opentk/opentk/tree/develop/Documentation) folder.
 
 Technical documentation about the implementation of OpenTK can be found in the [Technical Wiki](https://github.com/opentk/opentk/wiki).
 
@@ -171,7 +171,7 @@ Technical documentation about the implementation of OpenTK can be found in the [
 Need Help?
 ==========
 
-Post your questions at the [CustomOpenTK forums](http://www.opentk.com/forum).
+Post your questions at the [OpenTK forums](http://www.opentk.com/forum).
 
 Report bugs at https://github.com/opentk/opentk/issues
 
@@ -197,7 +197,7 @@ OpenTK 1.1.1 is backwards compatible with 1.1.0.
 
 OpenTK 1.1.0 is not backwards compatible with 1.0. Most projects will be able to upgrade without any modifications. Projects using the following signatures will have to implement the suggested changes:
 
-Namespace CustomOpenTK.Graphics.OpenGL
+Namespace OpenTK.Graphics.OpenGL
 Change signature:
 - GL.MultiDrawArrays (`out` -> `ref`)
 - GL.Amd.DeletePerfMonitors (`out` -> `ref`)
@@ -212,7 +212,7 @@ Change return type:
 - GL.WaitSync (returns `WaitSyncFlags` instead of `ArbSync`)
 
 
-Namespace CustomOpenTK.Graphics.ES11
+Namespace OpenTK.Graphics.ES11
 Change return type:
 - GL.GetError (`ErrorCode` instead of `All`)
 
@@ -255,7 +255,7 @@ Change namespace:
 - GL.DisableDriverControlQCOM -> GL.Qcom.DisableDriverControl
 
 
-Namespace CustomOpenTK.Graphics.ES20.GL
+Namespace OpenTK.Graphics.ES20.GL
 Change signature (may cause crash):
 - GL.NV.GetFence now takes three parameters instead of two
 

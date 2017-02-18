@@ -27,7 +27,7 @@
 
 using System;
 
-namespace CustomOpenTK
+namespace OpenTK
 {
     /// <summary>
     /// Defines the event arguments for KeyPress events. Instances of this class are cached:

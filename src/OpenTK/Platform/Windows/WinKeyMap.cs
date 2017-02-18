@@ -28,9 +28,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using CustomOpenTK.Input;
+using OpenTK.Input;
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     static class WinKeyMap
     {

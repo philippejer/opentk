@@ -11,9 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Reflection;
-using CustomOpenTK.Graphics;
+using OpenTK.Graphics;
 
-namespace CustomOpenTK.Platform.Windows
+namespace OpenTK.Platform.Windows
 {
     internal partial class Wgl
     {
